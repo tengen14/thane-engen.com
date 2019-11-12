@@ -1,0 +1,22 @@
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body {
+  background-color: #283d3b;
+  color: white;
+  margin: 0;
+}
+
+div {
+  @include centerContent();
+}
+
+// 283D3B
+// 772E25
+// 197278
+// EDDDD4
+// C44536
