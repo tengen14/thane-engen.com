@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 body {
@@ -13,11 +12,24 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  @include centerContent();
+$secondary-color : #C44536;
+
+.btn-info {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  &:active {
+    background-color: $secondary-color !important;
+    border-color: $secondary-color !important;
+  }
+  &:focus {
+    box-shadow: none;
+    outline-color: $secondary-color;
+  }
 }
-
-
 
 // .particles {
 //   position: absolute;

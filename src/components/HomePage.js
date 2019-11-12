@@ -39,7 +39,10 @@ const HomePage = () => {
         </div>
       </nav>
       <HomeParticles />
-      <h1>My Name is Thane Engen and I am a Web Developer</h1>
+      <div className="text-center">
+        <h1>My Name is Thane Engen and I am a Web Developer</h1>
+        <button type="button" className="btn-lg btn-info">Learn More</button>
+      </div>
     </div>
   );
 };
