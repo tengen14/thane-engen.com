@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HomeParticles from "./HomeParticles";
 
 const HomePage = () => {
   return (
@@ -22,7 +23,7 @@ const HomePage = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link className="nav-item nav-link" to="#">
-              About 
+              About
             </Link>
             <Link className="nav-item nav-link" to="#">
               Skills
@@ -30,15 +31,13 @@ const HomePage = () => {
             <Link className="nav-item nav-link" to="#">
               Projects
             </Link>
-            <Link
-              className="nav-item nav-link"
-              to="#"
-            >
+            <Link className="nav-item nav-link" to="#">
               Contact
             </Link>
           </div>
         </div>
       </nav>
+      <HomeParticles />
       <h1>Home Page</h1>
     </div>
   );

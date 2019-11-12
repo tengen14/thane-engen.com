@@ -9,15 +9,20 @@ body {
   background-color: #283d3b;
   color: white;
   margin: 0;
-}
-
-div {
+  padding: 0;
 }
 
 h1 {
   @include centerContent();
 }
 
+// .particles {
+//   position: absolute;
+//   display: block;
+//   top: 0;
+//   left: 0;
+//   z-index: 0;
+// }
 
 // 283D3B
 // 772E25
