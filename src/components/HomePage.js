@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HomeParticles from "./HomeParticles";
+import logo from "../imgs/thane-engen-logo.png";
 
 const HomePage = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-sm navbar-dark">
         <Link to="#" className="navbar-brand">
-          Thane Engen
+          <img src={logo} alt="Thane Engen Logo" />
         </Link>
         <button
           className="navbar-toggler"
@@ -38,7 +39,7 @@ const HomePage = () => {
         </div>
       </nav>
       <HomeParticles />
-      <h1>Home Page</h1>
+      <h1>My Name is Thane Engen and I am a Web Developer</h1>
     </div>
   );
 };
