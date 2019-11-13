@@ -35,6 +35,13 @@ img {
   height: 45px;
 }
 
+.navbar-toggler {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
 // .particles {
 //   position: absolute;
 //   display: block;
