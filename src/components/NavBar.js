@@ -20,8 +20,8 @@ const NavBar = () => {
       >
         <span><Octicon icon={KebabHorizontal} size="medium"/></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
+      <div className="collapse navbar-collapse d-sm-flex justify-content-end text-right" id="navbarNavAltMarkup">
+        <div className="navbar-nav ">
           <Link className="nav-item nav-link" to="#">
             About
           </Link>
