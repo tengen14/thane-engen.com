@@ -5,7 +5,7 @@ import logo from "../imgs/thane-engen-logo.png";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark">
+    <nav className="navbar navbar-expand-sm navbar-dark position-fixed">
       <Link to="#" className="navbar-brand">
         <img src={logo} alt="Thane Engen Logo" />
       </Link>

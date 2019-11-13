@@ -7,9 +7,11 @@ const HomePage = () => {
     <div>
       <NavBar />
       <HomeParticles />
-      <div className="text-center">
+      <div id="enter-site-content" className="text-center">
         <h1>My Name is Thane Engen and I am a Web Developer</h1>
-        <button type="button" className="red-button">Learn More</button>
+        <button type="button" className="red-button">
+          Learn More
+        </button>
       </div>
     </div>
   );
