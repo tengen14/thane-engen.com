@@ -1,8 +1,15 @@
-$primary-color: #283d38;
-$secondary-color: #c44536;
+$primary-blue: #283d38;
+$secondary-blue: #197278;
+$primary-red: #772e25;
+$secondary-red: #c44536;
+$primary-pink: #edddd4;
 
 nav {
   width: 100%;
+  img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 body {
@@ -14,8 +21,8 @@ body {
 
 .red-button {
   color: white;
-  background-color: $secondary-color;
-  border-color: $secondary-color;
+  background-color: $secondary-red;
+  border-color: $secondary-red;
   width: 110px;
   height: 40px;
   border-radius: 4px;
@@ -23,14 +30,9 @@ body {
     outline: 0;
   }
   &:active {
-    background-color: $secondary-color;
+    background-color: $secondary-red;
     opacity: 90%;
   }
-}
-
-img {
-  width: 45px;
-  height: 45px;
 }
 
 .navbar-toggler {
@@ -40,9 +42,9 @@ img {
   }
 }
 
-canvas {
-  background-color: $primary-color;
-  position: absolute;
+.particles {
+  background-color: $primary-blue;
+  position: relative;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -54,19 +56,19 @@ canvas {
 }
 
 #enter-site-content {
-  position: relative;
+  position: absolute;
   top: 50vh;
+  width: 100%;
 }
-// .particles {
-//   position: absolute;
-//   display: block;
-//   top: 0;
-//   left: 0;
-//   z-index: 0;
-// }
 
-// 283D3B
-// 772E25
-// 197278
-// EDDDD4
-// C44536
+#about {
+  background-color: $primary-red;
+  height: 100%;
+  h2 {
+  }
+  img {
+    filter: sepia(100%);
+    height: 300px;
+    width: 300px;
+  }
+}
