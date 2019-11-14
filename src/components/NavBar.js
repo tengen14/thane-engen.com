@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark position-fixed">
       <Link to="#" className="navbar-brand">
-        <img src={logo} alt="Thane Engen Logo" />
+        <img src={logo} alt="" />
       </Link>
       <button
         className="navbar-toggler"
@@ -22,9 +22,9 @@ const NavBar = () => {
       </button>
       <div className="collapse navbar-collapse d-sm-flex justify-content-end text-right" id="navbarNavAltMarkup">
         <div className="navbar-nav ">
-          <Link className="nav-item nav-link" to="#">
+          <a className="nav-item nav-link" href="#about">
             About
-          </Link>
+          </a>
           <Link className="nav-item nav-link" to="#">
             Skills
           </Link>

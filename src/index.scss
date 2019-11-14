@@ -6,9 +6,11 @@ $primary-pink: #edddd4;
 
 nav {
   width: 100%;
+  background-color: $primary-blue;
+  z-index: 1;
   img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -64,7 +66,10 @@ body {
 #about {
   background-color: $primary-red;
   height: 100%;
+  padding-bottom: 40px;
   h2 {
+    margin: 0;
+    height: 40px;
   }
   img {
     filter: sepia(100%);
