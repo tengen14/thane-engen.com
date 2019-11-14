@@ -66,7 +66,6 @@ body {
 #about {
   background-color: $primary-red;
   height: 100%;
-  padding-bottom: 40px;
   h2 {
     margin: 0;
     height: 40px;
@@ -76,4 +75,8 @@ body {
     height: 300px;
     width: 300px;
   }
+}
+
+.col-sm {
+  padding-bottom: 40px;
 }

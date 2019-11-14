@@ -26,9 +26,6 @@ const NavBar = () => {
             About
           </a>
           <Link className="nav-item nav-link" to="#">
-            Skills
-          </Link>
-          <Link className="nav-item nav-link" to="#">
             Projects
           </Link>
           <Link className="nav-item nav-link" to="#">
