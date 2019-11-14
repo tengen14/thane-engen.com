@@ -6,9 +6,9 @@ import logo from "../imgs/thane-engen-logo.png";
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark position-fixed">
-      <Link to="#" className="navbar-brand">
+      <a href="#top" className="navbar-brand">
         <img src={logo} alt="" />
-      </Link>
+      </a>
       <button
         className="navbar-toggler"
         type="button"

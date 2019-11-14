@@ -7,6 +7,7 @@ import About from "./About";
 const HomePage = () => {
   return (
     <div>
+      <a name="top" />
       <NavBar />
       <HomeParticles />
       <div id="enter-site-content" className="text-center">
