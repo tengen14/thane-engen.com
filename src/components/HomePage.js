@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import HomeParticles from "./HomeParticles";
 import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const HomePage = () => {
   return (
@@ -19,6 +21,8 @@ const HomePage = () => {
         </a>
       </div>
       <About />
+      <Projects />
+      <Contact />
     </div>
   );
 };

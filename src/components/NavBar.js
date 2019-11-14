@@ -25,12 +25,12 @@ const NavBar = () => {
           <a className="nav-item nav-link" href="#about">
             About
           </a>
-          <Link className="nav-item nav-link" to="#">
+          <a className="nav-item nav-link" href="#projects">
             Projects
-          </Link>
-          <Link className="nav-item nav-link" to="#">
+          </a>
+          <a className="nav-item nav-link" href="#contact">
             Contact
-          </Link>
+          </a>
           <Link className="nav-item nav-link" to="#">
             Resume
           </Link>
