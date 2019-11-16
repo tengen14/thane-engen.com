@@ -3,7 +3,7 @@ import React from "react";
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { feedback: "", name: "Name", email: "email@example.com" };
+    this.state = { name: "", subject: "", email: "", feedback: "" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -12,12 +12,34 @@ export default class Contact extends React.Component {
     return (
       <div id="contact">
         <h2>Contact</h2>
-        <form className="test-mailing">
-          <h1>Let's see if it works</h1>
+        <form>
+          <input
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            required
+            value={this.state.name}
+            onChange={this.handleChange}
+          />
+          <input
+            name="subject"
+            type="text"
+            placeholder="Subject"
+            required
+            value={this.state.subject}
+            onChange={this.handleChange}
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
           <div>
             <textarea
-              id="test-mailing"
-              name="test-mailing"
+              name="feedback"
               onChange={this.handleChange}
               placeholder="Post some lorem ipsum here"
               required
@@ -37,16 +59,24 @@ export default class Contact extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ feedback: event.target.value });
+    const value = event.target.value;
+    this.setState({
+      ...this.state,
+      [event.target.feedback]: value,
+      [event.target.name]: value,
+      [event.target.subject]: value,
+      [event.target.email]: value
+    });
   }
 
   handleSubmit(event) {
     const templateId = "template_fo7tCjdD";
 
     this.sendFeedback(templateId, {
-      message_html: this.state.feedback,
       from_name: this.state.name,
-      reply_to: this.state.email
+      _subject: this.state.subject,
+      _email: this.state.email,
+      message_html: this.state.feedback
     });
   }
 
