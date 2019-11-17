@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -47,7 +48,7 @@ export default class Contact extends React.Component {
           />
           <button
             type="submit"
-            className="btn btn-submit"
+            className="btn btn-primary"
             onClick={this.handleSubmit}
           >
             Submit
@@ -57,10 +58,10 @@ export default class Contact extends React.Component {
     );
   }
 
-  handleChange(event) {
+  handleChange(event, state) {
     const value = event.target.value;
     this.setState({
-      ...this.state,
+      ...state,
       [event.target.feedback]: value,
       [event.target.name]: value,
       [event.target.subject]: value,
@@ -77,15 +78,35 @@ export default class Contact extends React.Component {
       _email: this.state.email,
       message_html: this.state.feedback
     });
+
+    // this.setState({ name: "", subject: "", email: "", feedback: "" });
+    // event.preventDefault();
   }
 
   sendFeedback(templateId, variables) {
+
+    const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    console.log(this.state.email);
+    for (let field in this.state) {
+      if (this.state[field] === '') {
+       return console.error("submission is missing");
+      } 
+    }
+
+    if (this.state.email.match(emailValidation)) {
+      console.log("Email is valid");
+    } else {
+      return console.error("Email is invalid");
+    }
+
     window.emailjs
       .send("gmail", templateId, variables)
       .then(response => {
         console.log("Email successfully sent!", response.status, response.text);
-      })
-      // Handle errors here however you like, or use a React error boundary
-      .catch(error => alert("Something went wrong, see error below...", error));
+      });
   }
 }
+
+
+// values only cleared when all values are filled and sent
