@@ -37,22 +37,21 @@ export default class Contact extends React.Component {
             value={this.state.email}
             onChange={this.handleChange}
           />
-          <div>
-            <textarea
-              name="feedback"
-              onChange={this.handleChange}
-              placeholder="Post some lorem ipsum here"
-              required
-              value={this.state.feedback}
-              style={{ width: "100%", height: "150px" }}
-            />
-          </div>
-          <input
-            type="button"
-            value="Submit"
-            className="btn btn--submit"
-            onClick={this.handleSubmit}
+          <textarea
+            name="feedback"
+            onChange={this.handleChange}
+            placeholder="Message..."
+            required
+            value={this.state.feedback}
+            style={{ width: "100%", height: "150px" }}
           />
+          <button
+            type="submit"
+            className="btn btn-submit"
+            onClick={this.handleSubmit}
+          >
+            Submit
+          </button>
         </form>
       </div>
     );
@@ -83,15 +82,10 @@ export default class Contact extends React.Component {
   sendFeedback(templateId, variables) {
     window.emailjs
       .send("gmail", templateId, variables)
-      .then(res => {
-        console.log("Email successfully sent!");
+      .then(response => {
+        console.log("Email successfully sent!", response.status, response.text);
       })
       // Handle errors here however you like, or use a React error boundary
-      .catch(err =>
-        console.error(
-          "Oh well, you failed. Here some thoughts on the error that occured:",
-          err
-        )
-      );
+      .catch(error => alert("Something went wrong, see error below...", error));
   }
 }
