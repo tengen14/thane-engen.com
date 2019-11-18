@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
     return (
       <div id="contact">
         <h2>Contact</h2>
-        <form autocomplete="off">
+        <form autoComplete="off">
           <input
             name="name"
             type="text"
@@ -78,10 +78,6 @@ export default class Contact extends React.Component {
       _email: this.state.email,
       message_html: this.state.feedback
     });
-    
-    // event.preventDefault();
-    // this.setState({ name: "", subject: "", email: "", feedback: "" });
-
   }
 
   sendFeedback(templateId, variables) {
@@ -101,7 +97,9 @@ export default class Contact extends React.Component {
 
     window.emailjs.send("gmail", templateId, variables).then(response => {
       console.log("Email successfully sent!", response.status, response.text);
+      alert("Email successfully sent!");
     });
+    this.setState({ name: "", subject: "", email: "", feedback: "" });
   }
 }
 
