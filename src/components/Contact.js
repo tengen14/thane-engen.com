@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
     return (
       <div id="contact">
         <h2>Contact</h2>
-        <form>
+        <form autocomplete="off">
           <input
             name="name"
             type="text"
@@ -78,35 +78,31 @@ export default class Contact extends React.Component {
       _email: this.state.email,
       message_html: this.state.feedback
     });
-
-    // this.setState({ name: "", subject: "", email: "", feedback: "" });
+    
     // event.preventDefault();
+    // this.setState({ name: "", subject: "", email: "", feedback: "" });
+
   }
 
   sendFeedback(templateId, variables) {
-
     const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    console.log(this.state.email);
     for (let field in this.state) {
-      if (this.state[field] === '') {
-       return console.error("submission is missing");
-      } 
+      if (this.state[field] === "") {
+        return console.error("Submission is Missing");
+      }
     }
 
     if (this.state.email.match(emailValidation)) {
-      console.log("Email is valid");
+      console.log("Email is Valid");
     } else {
-      return console.error("Email is invalid");
+      return console.error("Email is Invalid");
     }
 
-    window.emailjs
-      .send("gmail", templateId, variables)
-      .then(response => {
-        console.log("Email successfully sent!", response.status, response.text);
-      });
+    window.emailjs.send("gmail", templateId, variables).then(response => {
+      console.log("Email successfully sent!", response.status, response.text);
+    });
   }
 }
-
 
 // values only cleared when all values are filled and sent
