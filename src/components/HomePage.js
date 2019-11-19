@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import HomeParticles from "./HomeParticles";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import "../styles/index.scss";
 
 const HomePage = () => {
   return (
-    <div>
+    <div id="Home">
       <a name="top" />
       <NavBar />
       <HomeParticles />

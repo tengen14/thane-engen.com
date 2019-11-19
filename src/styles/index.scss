@@ -1,94 +1,112 @@
-$primary-blue: #283d38;
-$secondary-blue: #197278;
-$primary-red: #772e25;
-$secondary-red: #c44536;
-$primary-pink: #edddd4;
-
-nav {
-  width: 100%;
-  background-color: $primary-blue;
-  z-index: 1;
-  img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 body {
-  color: white;
+  background-color: #747880;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
-.red-button {
-  color: white;
-  background-color: $secondary-red;
-  border-color: $secondary-red;
-  width: 110px;
-  height: 40px;
-  border-radius: 4px;
-  &:focus {
-    outline: 0;
+#Home {
+
+  $primary-blue: #283d38;
+  $secondary-blue: #197278;
+  $primary-red: #772e25;
+  $secondary-red: #c44536;
+  $primary-pink: #edddd4;
+
+  nav {
+    width: 100%;
+    background-color: $primary-blue;
+    z-index: 1;
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
-  &:active {
+
+  // body {
+  //   color: white;
+  //   margin: 0;
+  //   padding: 0;
+  //   overflow-x: hidden;
+  // }
+
+  
+
+  .red-button {
+    color: white;
     background-color: $secondary-red;
-    opacity: 90%;
-  }
-}
-
-.navbar-toggler {
-  border: none;
-  &:focus {
-    outline: none;
-  }
-}
-
-.particles {
-  background-color: $primary-blue;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-}
-
-@mixin centerVertical {
-  display: flex;
-  align-items: center;
-}
-
-#enter-site-content {
-  position: absolute;
-  top: 50vh;
-  width: 100%;
-}
-
-#about {
-  background-color: $primary-pink;
-  color: black;
-  height: 100%;
-  h2 {
-    margin: 0;
+    border-color: $secondary-red;
+    width: 110px;
     height: 40px;
+    border-radius: 4px;
+    &:focus {
+      outline: 0;
+    }
+    &:active {
+      background-color: $secondary-red;
+      opacity: 90%;
+    }
   }
-  img {
-    // filter: sepia(100%);
-    height: 300px;
-    width: 300px;
-  }
-}
 
-#projects {
-  background-color: $secondary-blue;
-  margin: 0;
-  h2 {
-    margin: 0;
+  .navbar-toggler {
+    border: none;
+    &:focus {
+      outline: none;
+    }
   }
-}
 
-#contact {
-  background-color: $primary-red;
-  h2 {
+  .particles {
+    background-color: $primary-blue;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  @mixin centerVertical {
+    display: flex;
+    align-items: center;
+  }
+
+  #enter-site-content {
+    position: absolute;
+    top: 50vh;
+    width: 100%;
+    h1 {
+      color: white;
+    }
+  }
+
+  #about {
+    background-color: $primary-pink;
+    color: black;
+    height: 100%;
+    h2 {
+      margin: 0;
+      height: 40px;
+      color: white;
+    }
+    img {
+      // filter: sepia(100%);
+      height: 300px;
+      width: 300px;
+    }
+  }
+
+  #projects {
+    background-color: $secondary-blue;
     margin: 0;
+    h2 {
+      margin: 0;
+      color: white;
+    }
+  }
+
+  #contact {
+    background-color: $primary-red;
+    h2 {
+      margin: 0;
+      color: white;
+    }
   }
 }

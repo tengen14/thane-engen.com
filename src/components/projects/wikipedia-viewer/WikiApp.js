@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import ArticleList from "./ArticleList";
-import "./styles/wikipedia.css"; 
+import "../../../styles/wikipedia.scss";
 
 class App extends React.Component {
   state = { articles: [] };
@@ -25,7 +25,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="Wikipedia">
         <div id="outer">
           <div id="middle">
             <div id="inner">
