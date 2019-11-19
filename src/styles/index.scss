@@ -1,17 +1,15 @@
 body {
   background-color: #747880;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
 }
 
-#Home {
+$primary-blue: #283d38;
+$secondary-blue: #197278;
+$primary-red: #772e25;
+$secondary-red: #c44536;
+$primary-pink: #edddd4;
 
-  $primary-blue: #283d38;
-  $secondary-blue: #197278;
-  $primary-red: #772e25;
-  $secondary-red: #c44536;
-  $primary-pink: #edddd4;
+#Home {
 
   nav {
     width: 100%;
@@ -29,8 +27,6 @@ body {
   //   padding: 0;
   //   overflow-x: hidden;
   // }
-
-  
 
   .red-button {
     color: white;

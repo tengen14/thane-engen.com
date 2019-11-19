@@ -6,6 +6,7 @@ class SearchBar extends React.Component {
   onSubmitForm = event => {
     // Prevent default action of 'onSubmit' such as refreshing page
     event.preventDefault();
+    window.scrollTo(0, 0);
 
     // term is passed as a prop of onSubmit(), used in parent component App.js
     this.props.onSubmit(this.state.term);
