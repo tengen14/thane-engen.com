@@ -21,13 +21,6 @@ $primary-pink: #edddd4;
     }
   }
 
-  // body {
-  //   color: white;
-  //   margin: 0;
-  //   padding: 0;
-  //   overflow-x: hidden;
-  // }
-
   .red-button {
     color: white;
     background-color: $secondary-red;
@@ -95,6 +88,9 @@ $primary-pink: #edddd4;
     h2 {
       margin: 0;
       color: white;
+    }
+    a {
+      color: greenyellow;
     }
   }
 
