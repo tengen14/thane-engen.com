@@ -33,24 +33,27 @@ i.fas.fa-hamburger {
   overflow: scroll;
   border: 2px solid black;
   border-radius: 10px;
+  ul {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
-#recipe-list > ul {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
+a {
+  li {
+    list-style: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: oblique;
+    padding-left: 25px;
+  }
 }
 
-a > li {
-  list-style: none;
-  font-size: 24px;
-  font-weight: bold;
-  font-style: oblique;
-  padding-left: 25px;
-}
-
-a:nth-child(even) > li {
-  background-color: #d2fdff;
+a:nth-child(even) {
+  li {
+    background-color: #d2fdff;
+  }
 }
 
 /* RECIPE SHOW  */
@@ -93,15 +96,14 @@ i:hover {
   border-top-right-radius: 7.8px;
   display: flex;
   justify-content: space-between;
-}
-
-#recipe-title > h2 {
-  color: white;
-  font-size: 36px;
-  padding-left: 25px;
-  padding-top: 6px;
-  max-width: 75%;
-  overflow: hidden;
+  h2 {
+    color: white;
+    font-size: 36px;
+    padding-left: 25px;
+    padding-top: 6px;
+    max-width: 75%;
+    overflow: hidden;
+  }
 }
 
 #title-buttons {
@@ -118,18 +120,23 @@ i.fas.fa-plus {
   font-size: 2.2rem;
 }
 
-#recipe-body > ul > li {
-  font-size: 28px;
-  line-height: 1.75;
-  overflow-wrap: break-word;
-}
-
-#recipe-body > ol > li {
-  font-size: 24px;
-  line-height: 1.5;
-  padding: 30px 10px 25px 0px;
-  text-indent: 25px;
-  overflow-wrap: break-word;
+#recipe-body {
+  ul {
+    li {
+      font-size: 28px;
+      line-height: 1.75;
+      overflow-wrap: break-word;
+    }
+  }
+  ol {
+    li {
+      font-size: 24px;
+      line-height: 1.5;
+      padding: 30px 10px 25px 0px;
+      text-indent: 25px;
+      overflow-wrap: break-word;
+    }
+  }
 }
 
 /* MEDIA QUERIES */
@@ -139,8 +146,10 @@ i.fas.fa-plus {
   i.fas.fa-hamburger {
     font-size: 4rem;
   }
-  #recipe-title > h2 {
-    width: 65%;
+  #recipe-title {
+    h2 {
+      width: 65%;
+    }
   }
   #title-buttons {
     padding-right: 5px;
