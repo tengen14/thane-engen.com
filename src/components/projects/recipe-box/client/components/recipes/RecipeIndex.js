@@ -4,7 +4,7 @@ import RecipeList from "./RecipeIndex/RecipeList";
 import RecipeShow from "./RecipeIndex/RecipeShow";
 import { getRecipes } from "../../actions";
 import "../../../../../../index";
-import "../../styles/recipe-box.scss"
+import "../../../../../../styles/recipe-box/recipe-box.scss";
 
 class RecipeIndex extends React.Component {
   componentDidMount() {
