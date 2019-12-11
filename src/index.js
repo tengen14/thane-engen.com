@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import reduxThunk from "redux-thunk";
 
 import App from "./components/App";
-import reducers from "./components/projects/recipe-box/client/src/reducers/index";
+import reducers from "./components/projects/recipe-box/client/reducers/index";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

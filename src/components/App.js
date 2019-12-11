@@ -2,10 +2,10 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import HomePage from "./HomePage";
 import WikiApp from "./projects/wikipedia-viewer/WikiApp";
-import RecipeIndex from "./projects/recipe-box/client/src/components/recipes/RecipeIndex";
-import RecipeCreate from "./projects/recipe-box/client/src/components/recipes/RecipeCreate";
-import RecipeEdit from "./projects/recipe-box/client/src/components/recipes/RecipeEdit";
-import RecipeDelete from "./projects/recipe-box/client/src/components/recipes/RecipeDelete";
+import RecipeIndex from "./projects/recipe-box/client/components/recipes/RecipeIndex";
+import RecipeCreate from "./projects/recipe-box/client/components/recipes/RecipeCreate";
+import RecipeEdit from "./projects/recipe-box/client/components/recipes/RecipeEdit";
+import RecipeDelete from "./projects/recipe-box/client/components/recipes/RecipeDelete";
 
 import history from "../history";
 
