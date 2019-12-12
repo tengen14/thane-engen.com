@@ -21,7 +21,7 @@ class RecipeList extends React.Component {
   render() {
     const styleVanillaRecipeList = {
       borderBottomRightRadius: '0px',
-      borderBottomLeftRadius: '0px'
+      borderBottomLeftRadius: '0px',
     }
 
     // Style differs when no recipe is selected
@@ -33,7 +33,7 @@ class RecipeList extends React.Component {
       );
     } else {
       return (
-        <div id="recipe-list" className="ui container">
+        <div id="recipe-list" className="ui container" style={{height: '100vh'}}>
           <ul>{this.renderList()}</ul>
         </div>
       );

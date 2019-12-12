@@ -12,15 +12,33 @@ class RecipeIndex extends React.Component {
   }
 
   render() {
-    return (
-      <div id="Recipe-Box">
-        <h1>
-          Recipe Box <i className="fas fa-hamburger"></i>
-        </h1>
-        <RecipeList recipes={this.props.recipes} selectedRecipe={this.props.selectedRecipe} />
-        <RecipeShow selectedRecipe={this.props.selectedRecipe} />
-      </div>
-    );
+    if (!this.props.selectedRecipe) {
+      return (
+        <div id="Recipe-Box">
+          <h1>
+            Recipe Box <i className="fas fa-hamburger"></i>
+          </h1>
+          <RecipeList
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
+          />
+          <RecipeShow selectedRecipe={this.props.selectedRecipe} />
+        </div>
+      );
+    } else {
+      return (
+        <div id="Recipe-Box" style={{height: '135vh'}}>
+          <h1>
+            Recipe Box <i className="fas fa-hamburger"></i>
+          </h1>
+          <RecipeList
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
+          />
+          <RecipeShow selectedRecipe={this.props.selectedRecipe} />
+        </div>
+      );
+    }
   }
 }
 
@@ -32,7 +50,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { getRecipes }
-)(RecipeIndex);
+export default connect(mapStateToProps, { getRecipes })(RecipeIndex);
