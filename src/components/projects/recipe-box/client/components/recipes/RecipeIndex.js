@@ -13,7 +13,7 @@ class RecipeIndex extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="Recipe-Box">
         <h1>
           Recipe Box <i className="fas fa-hamburger"></i>
         </h1>

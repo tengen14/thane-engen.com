@@ -3,9 +3,11 @@
 
   ul {
     position: relative;
-    top: 67.5vh;
     padding-right: 17.5%;
     padding-left: 17.5%;
+    padding-top: 15%;
+    width: 100%;
+    margin: 0;
   }
 
   .ui.segment {
@@ -23,19 +25,21 @@
   h2.ui.header {
     color: #dedede;
     font-size: 26px;
+    overflow-wrap: break-word;
+    width: 100%;
   }
 
   p {
     font-size: 16px;
+    overflow-wrap: break-word;
+    width: 100%;
   }
 
   /* Body and Search Bar styling */
-/* 
 
-  body {
-    background-color: #747880 !important;
-    overflow-x: hidden !important;
-  } */
+  background-color: #747880 !important;
+  overflow-x: hidden !important;
+  height: 100vh;
 
   h1 {
     color: white;
@@ -61,25 +65,12 @@
     }
   }
 
-  #outer {
-    display: table;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  #search-bar {
+    padding-top: 40vh;
     text-align: center;
-  }
-
-  #middle {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  #inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
+    input {
+      width: 300px;
+    }
   }
 
   .prompt {

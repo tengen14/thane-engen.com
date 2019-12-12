@@ -26,22 +26,18 @@ class App extends React.Component {
   render() {
     return (
       <div id="Wikipedia">
-        <div id="outer">
-          <div id="middle">
-            <div id="inner">
-              <h1>Search below for Wikipedia articles</h1>
-              <SearchBar onSubmit={this.onSearchSubmit} />
-              <a
-                id="random-search"
-                /* Wikipedia URL that returns random article */
-                href="https://en.wikipedia.org/wiki/Special:Random"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                or click here for a random article
-              </a>
-            </div>
-          </div>
+        <div id="search-bar">
+          <h1>Search below for Wikipedia articles</h1>
+          <SearchBar onSubmit={this.onSearchSubmit} />
+          <a
+            id="random-search"
+            /* Wikipedia URL that returns random article */
+            href="https://en.wikipedia.org/wiki/Special:Random"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            or click here for a random article
+          </a>
         </div>
         <ArticleList articles={this.state.articles} />
       </div>
@@ -50,4 +46,3 @@ class App extends React.Component {
 }
 
 export default App;
-
