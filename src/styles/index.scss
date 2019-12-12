@@ -3,6 +3,10 @@
 //   overflow-x: hidden;
 // }
 
+body {
+  background-color: #fbe8a6;
+}
+
 $primary-blue: #283d38;
 $secondary-blue: #197278;
 $primary-red: #772e25;
@@ -10,7 +14,6 @@ $secondary-red: #c44536;
 $primary-pink: #edddd4;
 
 #Home {
-
   nav {
     width: 100%;
     background-color: $primary-blue;

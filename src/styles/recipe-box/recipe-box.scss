@@ -1,6 +1,7 @@
 #Recipe-Box {
-  background-color: #fbe8a6;
-  height: 100vh;
+  // background-color: #fbe8a6;
+  // height: 100vh;
+  padding-bottom: 10px;
 
   li {
     font-size: 30px;
@@ -33,6 +34,7 @@
     overflow: scroll;
     border: 2px solid black;
     border-radius: 10px;
+    padding: 0px;
     ul {
       position: relative;
       padding: 0px;
@@ -58,12 +60,17 @@
 
   /* RECIPE SHOW  */
 
+  .ui.container {
+    padding: 0px;
+  }
+
   #recipe-desc {
     position: relative;
     top: 50px;
     border: 2px solid black;
     border-radius: 10px;
     margin-bottom: 30px;
+    padding: 0px;
   }
 
   #recipe-body {
