@@ -1,6 +1,11 @@
 #Recipe-Box {
   // background-color: #fbe8a6;
   // height: 100vh;
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   padding-bottom: 10px;
 
   li {

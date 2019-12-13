@@ -5,9 +5,7 @@ import "../../../../../styles/recipe-box/recipe-form.scss";
 
 const Modal = props => {
   return ReactDOM.createPortal(
-    <div
-      className="ui dimmer modals visible active"
-    >
+    <div id="Recipe-Form" className="ui dimmer modals visible active">
       <div
         onClick={e => e.stopPropagation()}
         className="ui standard modal visible active"
