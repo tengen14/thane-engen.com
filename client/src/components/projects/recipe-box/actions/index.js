@@ -1,5 +1,5 @@
 import recipes from "../apis/recipes";
-import history from "../../../../../history";
+import history from "../../../../history";
 import {
   GET_RECIPE,
   GET_RECIPES,

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getRecipe } from "../../../actions";
-import "../../../../../../../index";
+import "../../../../../../index";
 
 class RecipeList extends React.Component {
   // List recipe titles (each links to separate show component)

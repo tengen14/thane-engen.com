@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, FieldArray, reduxForm } from "redux-form";
-import history from "../../../../../../history"
+import history from "../../../../../history"
 
 class RecipeForm extends React.Component {
   renderField = ({ input, label, type, meta: { touched, error } }) => {

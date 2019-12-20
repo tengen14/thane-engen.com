@@ -5,10 +5,10 @@ import HomePage from "./HomePage";
 
 import WikiApp from "./projects/wikipedia-viewer/WikiApp";
 
-import RecipeIndex from "./projects/recipe-box/client/components/recipes/RecipeIndex";
-import RecipeCreate from "./projects/recipe-box/client/components/recipes/RecipeCreate";
-import RecipeEdit from "./projects/recipe-box/client/components/recipes/RecipeEdit";
-import RecipeDelete from "./projects/recipe-box/client/components/recipes/RecipeDelete";
+import RecipeIndex from "./projects/recipe-box/components/recipes/RecipeIndex";
+import RecipeCreate from "./projects/recipe-box/components/recipes/RecipeCreate";
+import RecipeEdit from "./projects/recipe-box/components/recipes/RecipeEdit";
+import RecipeDelete from "./projects/recipe-box/components/recipes/RecipeDelete";
 
 import BookLanding from "./projects/book-blog/views/BookLanding";
 import BookList from "./projects/book-blog/views/BookList";

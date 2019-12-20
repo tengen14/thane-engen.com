@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getRecipe, deleteRecipe } from "../../actions";
-import history from "../../../../../../history";
+import history from "../../../../../history";
 
 class RecipeDelete extends React.Component {
   componentDidMount() {
