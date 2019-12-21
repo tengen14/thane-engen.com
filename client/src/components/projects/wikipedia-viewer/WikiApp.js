@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import ArticleList from "./ArticleList";
-import "../../../styles/wikipedia.scss";
+import "../../../styles/wikipedia-viewer/wikipedia.scss";
 
 class App extends React.Component {
   state = { articles: [] };
