@@ -1,0 +1,14 @@
+{
+  "name": "bookdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bookDB.js",
+  "scripts": {
+    "start": "json-server -p 3002 -w bookDB.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

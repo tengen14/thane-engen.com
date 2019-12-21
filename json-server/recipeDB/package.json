@@ -1,0 +1,14 @@
+{
+  "name": "recipedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "recipeDB.js",
+  "scripts": {
+    "start": "json-server -p 3001 -w recipeDB.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}
