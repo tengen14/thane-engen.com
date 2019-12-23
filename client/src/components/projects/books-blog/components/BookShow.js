@@ -1,29 +1,54 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { getBook, deleteBook } from "../actions";
 import "../../../../styles/book-blog/main.scss";
 
-const BookShow = () => {
-  return (
-    <div className="main">
-      <div class="container d-flex flex-column align-items-center">
-        <h1>blog.title </h1>
-        <h2>By: blog.author </h2>
-        {/* <img src="blog.image"> */}
-        <p>blog.desc </p>
-      </div>
+class BookShow extends React.Component {
+  componentDidMount() {
+    this.props.getBook(this.props.match.params.id);
+  }
 
-      <div class="container d-flex justify-content-around" id="edit-and-delete">
-        <a
-          class="btn btn-warning btn-lg" /* href="/books/<%= blog._id %>/edit" */
+  handleClick = () => {
+    console.log(this.props);
+    this.props.deleteBook(this.props.match.params.id);
+  }
+
+  render() {
+    console.log(this.props.book);
+    return (
+      <div className="main">
+        <div className="container d-flex flex-column align-items-center">
+          <h1>{this.props.book.title}</h1>
+          <h2>{this.props.book.author}</h2>
+          <img src={this.props.book.image} />
+          <p>{this.props.book.desc}</p>
+        </div>
+
+        <div
+          className="container d-flex justify-content-around"
+          id="edit-and-delete"
         >
-          Edit
-        </a>
+          <Link
+            className="btn btn-warning btn-lg"
+            to={`edit/${this.props.book.id}`}
+          >
+            Edit
+          </Link>
 
-        {/* <form action="/books/<%= blog._id %>?_method=DELETE" method="POST"> */}
-        <input class="btn btn-danger btn-lg" type="submit" value="Delete" />
-        {/* </form> */}
+          <button onClick={this.handleClick} className="btn btn-danger btn-lg">
+            Delete
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+}
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    book: state.books[ownProps.match.params.id]
+  };
 };
 
-export default BookShow;
+export default connect(mapStateToProps, { getBook, deleteBook })(BookShow);

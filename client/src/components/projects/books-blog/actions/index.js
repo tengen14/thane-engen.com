@@ -41,5 +41,5 @@ export const deleteBook = id => async dispatch => {
   await books.delete(`/books/${id}`);
 
   dispatch({ type: DELETE_BOOK, payload: id });
-  history.push("/book-blog");
+  history.goBack();
 };
