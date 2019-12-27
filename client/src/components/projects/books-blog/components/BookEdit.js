@@ -1,34 +1,51 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { editBook } from "../actions/";
+import { getBook, editBook } from "../actions/";
+
+import "../../../../styles/book-blog/main.scss";
 
 class BookEdit extends React.Component {
+  componentDidMount() {
+    this.props.getBook(this.props.match.params.id);
+  }
+
+  handleSubmit = formValues => {
+    this.props.editRecipe(this.props.match.params.id, formValues);
+  };
+
   render() {
-    console.log(this.state);
+    console.log(this.props);
+    const book = this.props.book;
+
     return (
-      <div>
+      <div className="main">
         <div className="container pt-5">
-          <form /* action="/books/<%= blog._id %>?_method=PUT" method="POST" */>
+          <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label>Title:</label>
               <input
                 className="form-control form-control-lg"
-                type="text" /* name="blog[title]" value="<%= blog.title %>" */
+                type="text"
+                name={book.title}
+                defaultValue={book.title}
               />
             </div>
             <div className="form-group">
               <label>Author:</label>
               <input
                 className="form-control form-control-lg"
-                type="text" /* name="blog[author]" value="<%= blog.author %>" */
+                type="text"
+                name={book.author}
+                defaultValue={book.author}
               />
             </div>
             <div className="form-group">
               <label>Image:</label>
               <input
                 className="form-control form-control-lg"
-                type="text" /* name="blog[image]" value="<%= blog.image %>" */
+                type="text"
+                name={book.image}
+                defaultValue={book.image}
               />
             </div>
             <div className="form-group">
@@ -36,10 +53,10 @@ class BookEdit extends React.Component {
               <textarea
                 id="description-input"
                 className="form-control"
-                type="text" /* name="blog[desc]" value="<%= blog.desc %>" */
-              >
-                blog.desc
-              </textarea>
+                type="text"
+                name={book.desc}
+                defaultValue={book.desc}
+              />
             </div>
             <input
               className="btn btn-warning btn-lg"
@@ -53,4 +70,10 @@ class BookEdit extends React.Component {
   }
 }
 
-export default connect(null, { editBook })(BookEdit);
+const mapStateToProps = (state, ownProps) => {
+  return {
+    book: state.books[ownProps.match.params.id]
+  };
+};
+
+export default connect(mapStateToProps, { getBook, editBook })(BookEdit);

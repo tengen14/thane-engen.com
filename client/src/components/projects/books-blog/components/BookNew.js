@@ -1,47 +1,60 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createBook } from "../actions";
 import "../../../../styles/book-blog/main.scss";
 
-const BookNew = () => {
-  return (
-    <div className="main">
-      <div class="container pt-5">
-        <form /* action="/books" method="POST" */>
-          <div class="form-group">
-            <label>Title:</label>
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              /* name="blog[title]" */ placeholder="title"
-            />
-          </div>
-          <div class="form-group">
-            <label>Author:</label>
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              /* name="blog[author]" */ placeholder="author"
-            />
-          </div>
-          <div class="form-group">
-            <label>Image:</label>
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              /* name="blog[image]" */ placeholder="image url"
-            />
-          </div>
-          <div class="form-group">
-            <label>Description:</label>
-            <textarea
-              class="form-control form-control-lg"
-              placeholder="add a description..." /* name="blog[desc]" */
-            />
-          </div>
-          <input class="btn btn-primary btn-lg" type="submit" />
-        </form>
-      </div>
-    </div>
-  );
-};
+class BookNew extends React.Component {
+  
+  handleSubmit = formValues => {
+    this.props.createBook(formValues);
+  }
 
-export default BookNew;
+  render() {
+    console.log(this.props);
+    return (
+      <div className="main">
+        <div className="container pt-5">
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <label>Title:</label>
+              <input
+                className="form-control form-control-lg"
+                type="text"
+                placeholder="title"
+              />
+            </div>
+            <div className="form-group">
+              <label>Author:</label>
+              <input
+                className="form-control form-control-lg"
+                type="text"
+                placeholder="author"
+              />
+            </div>
+            <div className="form-group">
+              <label>Image:</label>
+              <input
+                className="form-control form-control-lg"
+                type="text"
+                placeholder="image url"
+              />
+            </div>
+            <div className="form-group">
+              <label>Description:</label>
+              <textarea
+                className="form-control form-control-lg"
+                placeholder="add a description..."
+              />
+            </div>
+            <input className="btn btn-primary btn-lg" type="submit" />
+          </form>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default connect(
+  null,
+  { createBook }
+)(BookNew);

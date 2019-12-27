@@ -10,12 +10,10 @@ class BookShow extends React.Component {
   }
 
   handleClick = () => {
-    console.log(this.props);
     this.props.deleteBook(this.props.match.params.id);
   }
 
   render() {
-    console.log(this.props.book);
     return (
       <div className="main">
         <div className="container d-flex flex-column align-items-center">
