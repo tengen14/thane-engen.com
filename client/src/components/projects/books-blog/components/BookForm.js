@@ -56,7 +56,7 @@ class BookForm extends React.Component {
           </div>
           <div className="form-group">
             <Field
-              name="image url"
+              name="image"
               component={this.renderField}
               type="text"
               label="Image URL:"
@@ -64,7 +64,7 @@ class BookForm extends React.Component {
           </div>
           <div className="form-group">
             <Field
-              name="description"
+              name="desc"
               component={this.renderTextArea}
               type="text"
               label="Description:"

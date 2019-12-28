@@ -27,7 +27,7 @@ export const createBook = formValues => async dispatch => {
   const response = await books.post("/books", { ...formValues });
 
   dispatch({ type: CREATE_BOOK, payload: response.data });
-  history.push(`/book-blog/books/${response.data.id}`);
+  history.push("/book-blog/books");
 };
 
 export const editBook = (id, formValues) => async dispatch => {
