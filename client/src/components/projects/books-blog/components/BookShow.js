@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getBook, deleteBook } from "../actions";
+import BookNav from "./BookNav";
 import "../../../../styles/book-blog/main.scss";
 
 class BookShow extends React.Component {
@@ -16,6 +17,7 @@ class BookShow extends React.Component {
   render() {
     return (
       <div className="main">
+        <BookNav />
         <div className="container d-flex flex-column align-items-center">
           <h1>{this.props.book.title}</h1>
           <h2>{this.props.book.author}</h2>

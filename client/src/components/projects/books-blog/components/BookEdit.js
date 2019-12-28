@@ -2,6 +2,7 @@ import _ from "lodash";
 import React from "react";
 import { connect } from "react-redux";
 import { getBook, editBook } from "../actions/";
+import BookNav from "./BookNav";
 import BookForm from "./BookForm";
 import "../../../../styles/book-blog/main.scss";
 
@@ -17,6 +18,7 @@ class BookEdit extends React.Component {
   render() {
     return (
       <div className="main">
+        <BookNav />
         <BookForm
           type="edit"
           initialValues={_.pick(this.props.book, "title", "author", "image", "desc")}

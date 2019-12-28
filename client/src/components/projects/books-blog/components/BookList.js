@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getBooks } from "../actions";
+import BookNav from "./BookNav";
 
 import "../../../../styles/book-blog/main.scss";
 
@@ -33,6 +34,7 @@ class BookList extends React.Component {
   render() {
     return (
       <div className="main">
+        <BookNav />
         <div>
           <div>{this.renderList()}</div>
           <br />

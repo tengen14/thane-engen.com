@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createBook } from "../actions";
+import BookNav from "./BookNav";
 import BookForm from "./BookForm";
 import "../../../../styles/book-blog/main.scss";
 
@@ -12,6 +13,7 @@ class BookNew extends React.Component {
   render() {
     return (
       <div className="main">
+        <BookNav />
         <BookForm
           type="add"
           onSubmit={this.onSubmit} 
