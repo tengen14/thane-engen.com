@@ -10,7 +10,7 @@ class BookEdit extends React.Component {
   }
 
   handleSubmit = formValues => {
-    this.props.editRecipe(this.props.match.params.id, formValues);
+    this.props.editBook(this.props.match.params.id, formValues);
   };
 
   render() {
