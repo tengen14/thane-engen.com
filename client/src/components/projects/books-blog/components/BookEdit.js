@@ -18,6 +18,7 @@ class BookEdit extends React.Component {
     return (
       <div className="main">
         <BookForm
+          type="edit"
           initialValues={_.pick(this.props.book, "title", "author", "image", "desc")}
           onSubmit={this.onSubmit} 
         />

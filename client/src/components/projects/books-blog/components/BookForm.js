@@ -6,13 +6,18 @@ class BookForm extends React.Component {
     return (
       <React.Fragment>
         <label>{label}</label>
-        <input {...input} type={type} placeholder={label} className="form-control form-control-lg"/>
+        <input
+          {...input}
+          type={type}
+          placeholder={label}
+          className="form-control form-control-lg"
+        />
         {touched && error && <span>{error}</span>}
       </React.Fragment>
     );
   };
 
-   renderTextArea = ({ input, label, type, meta: { touched, error } }) => {
+  renderTextArea = ({ input, label, type, meta: { touched, error } }) => {
     return (
       <React.Fragment>
         <label>{label}</label>
@@ -32,6 +37,15 @@ class BookForm extends React.Component {
 
   onSubmit = formValues => {
     this.props.onSubmit(formValues);
+  };
+
+  buttonType()  {
+    if (this.props.type === "add") {
+      return <button className="btn btn-primary btn-lg">Submit</button>;
+    }
+    if (this.props.type === "edit") {
+       return <button className="btn btn-warning btn-lg">Update</button>;
+    }
   };
 
   render() {
@@ -70,7 +84,7 @@ class BookForm extends React.Component {
               label="Description:"
             />
           </div>
-          <button className="btn btn-primary btn-lg">Submit</button>
+          {this.buttonType()}
         </form>
       </div>
     );

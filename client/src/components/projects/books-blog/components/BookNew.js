@@ -13,6 +13,7 @@ class BookNew extends React.Component {
     return (
       <div className="main">
         <BookForm
+          type="add"
           onSubmit={this.onSubmit} 
         />
       </div>
