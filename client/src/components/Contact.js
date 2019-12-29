@@ -1,5 +1,5 @@
-import React from "react";
 import _ from "lodash";
+import React from "react";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -61,11 +61,19 @@ export default class Contact extends React.Component {
             </div>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-primary btn-lg"
               onClick={this.handleSubmit}
             >
               Submit
             </button>
+            <div>
+              <a href="https://github.com/tengen14" target="_blank">
+                <i class="fab fa-github-square" />
+              </a>
+              <a href="https://www.linkedin.com/in/thane-engen-b573bb149" target="_blank">
+                <i class="fab fa-linkedin" />
+              </a>
+            </div>
           </form>
         </div>
       </div>

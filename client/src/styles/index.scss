@@ -70,13 +70,13 @@ $primary-pink: #edddd4;
   }
 
   #about {
-    background-color: $primary-pink;
+    background-color: white;
     color: black;
     height: 100%;
     h2 {
       margin: 0;
       height: 40px;
-      color: white;
+      color: black;
     }
     img {
       height: 300px;
@@ -85,19 +85,19 @@ $primary-pink: #edddd4;
   }
 
   #projects {
-    background-color: $secondary-blue;
+    background-color: white;
     margin: 0;
     h2 {
       margin: 0;
-      color: white;
+      color: black;
     }
     a {
-      color: greenyellow;
+      color: blue;
     }
   }
 
   #contact {
-    background-color: $primary-red;
+    background-color: $primary-blue;
     h2 {
       margin: 0;
       color: white;
