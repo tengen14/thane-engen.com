@@ -34,11 +34,11 @@
   }
 
   span {
-  color: #c70000;
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 10px;
-}
+    color: #c70000;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+  }
 
   form {
     width: 100%;
@@ -87,7 +87,6 @@
   }
 
   li {
-    
     i {
       order: 1;
     }
@@ -190,22 +189,17 @@
     span {
       font-size: 16px;
     }
-
     #direction-delete-button {
       span {
         font-size: 20px;
       }
     }
-
-    
-  ul.custom-field-array-container {
-    padding-left: 0px;
-  }
-
+    ul.custom-field-array-container {
+      padding-left: 0px;
+    }
   }
 
   @media (max-height: 500px) {
     padding: 300px 0px 300px 0px;
   }
-
 }

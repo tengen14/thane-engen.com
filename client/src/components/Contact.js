@@ -12,48 +12,62 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div id="contact">
-        <h2>Contact</h2>
-        <form autoComplete="off">
-          <input
-            name="name"
-            type="text"
-            placeholder="Your Name"
-            required
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-          <input
-            name="subject"
-            type="text"
-            placeholder="Subject"
-            required
-            value={this.state.subject}
-            onChange={this.handleChange}
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Email"
-            required
-            value={this.state.email}
-            onChange={this.handleChange}
-          />
-          <textarea
-            name="feedback"
-            onChange={this.handleChange}
-            placeholder="Message..."
-            required
-            value={this.state.feedback}
-            style={{ width: "100%", height: "150px" }}
-          />
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onClick={this.handleSubmit}
-          >
-            Submit
-          </button>
-        </form>
+        <div className="container">
+          <h2>Contact</h2>
+          <form autoComplete="off">
+            <div className="form-group">
+              <input
+                className="form-control"
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                required
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control"
+                name="subject"
+                type="text"
+                placeholder="Subject"
+                required
+                value={this.state.subject}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control"
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                className="form-control"
+                name="feedback"
+                onChange={this.handleChange}
+                placeholder="Message..."
+                required
+                value={this.state.feedback}
+                style={{ width: "100%", height: "150px" }}
+              />
+            </div>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={this.handleSubmit}
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
