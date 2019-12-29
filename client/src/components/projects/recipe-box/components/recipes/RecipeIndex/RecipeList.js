@@ -7,7 +7,7 @@ import "../../../../../../index";
 class RecipeList extends React.Component {
   // List recipe titles (each links to separate show component)
   renderList = () => {
-    return this.props.recipes.map(recipe => {
+    return this.props.recipes.slice(0).reverse().map(recipe => {
       return (
         <Link to={`/recipe-box/recipes/${recipe.id}`} key={recipe.id}>
           <li onClick={() => this.props.getRecipe(recipe.id)}>
