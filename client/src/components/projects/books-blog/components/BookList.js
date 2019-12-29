@@ -12,7 +12,7 @@ class BookList extends React.Component {
   }
 
   renderList = () => {
-    return this.props.books.map(book => {
+    return this.props.books.slice(0).reverse().map(book => {
       return (
         <div key={book.id}>
           <div className="container d-flex flex-column align-items-center">
@@ -32,6 +32,7 @@ class BookList extends React.Component {
   };
 
   render() {
+    console.log(this.props.books);
     return (
       <div className="main">
         <BookNav />

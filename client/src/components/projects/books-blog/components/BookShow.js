@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getBook } from "../actions";
 import BookNav from "./BookNav";
-import BookDelete from "./BookDelete";
 import "../../../../styles/book-blog/main.scss";
 
 class BookShow extends React.Component {
