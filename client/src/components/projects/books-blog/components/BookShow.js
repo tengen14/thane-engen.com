@@ -1,17 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getBook, deleteBook } from "../actions";
+import { getBook } from "../actions";
 import BookNav from "./BookNav";
+import BookDelete from "./BookDelete";
 import "../../../../styles/book-blog/main.scss";
 
 class BookShow extends React.Component {
   componentDidMount() {
     this.props.getBook(this.props.match.params.id);
-  }
-
-  handleClick = () => {
-    this.props.deleteBook(this.props.match.params.id);
   }
 
   render() {
@@ -37,9 +34,12 @@ class BookShow extends React.Component {
             Edit
           </Link>
 
-          <button onClick={this.handleClick} className="btn btn-danger btn-lg">
+          <Link
+            to={`delete/${this.props.book.id}`}
+            className="btn btn-danger btn-lg"
+          >
             Delete
-          </button>
+          </Link>
         </div>
       </div>
     );
@@ -52,4 +52,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, { getBook, deleteBook })(BookShow);
+export default connect(mapStateToProps, { getBook })(BookShow);

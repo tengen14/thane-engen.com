@@ -15,6 +15,7 @@ import BookList from "./projects/books-blog/components/BookList";
 import BookShow from "./projects/books-blog/components/BookShow";
 import BookNew from "./projects/books-blog/components/BookNew";
 import BookEdit from "./projects/books-blog/components/BookEdit";
+import BookDelete from "./projects/books-blog/components/BookDelete";
 
 import history from "../history";
 
@@ -42,6 +43,7 @@ class App extends React.Component {
             <Route exact path="/book-blog" component={BookLanding} />
             <Route exact path="/book-blog/books/new" component={BookNew} />
             <Route exact path="/book-blog/books/edit/:id" component={BookEdit} />
+            <Route exact path="/book-blog/books/delete/:id" component={BookDelete} />
             <Route exact path="/book-blog/books" component={BookList} />
             <Route exact path="/book-blog/books/:id" component={BookShow} />
 
