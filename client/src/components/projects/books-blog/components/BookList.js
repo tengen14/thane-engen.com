@@ -17,7 +17,7 @@ class BookList extends React.Component {
         <div key={book.id}>
           <div className="container d-flex flex-column align-items-center">
             <h1>{book.title}</h1>
-            <h2>{book.author}</h2>
+            <h2>By: {book.author}</h2>
 
             <img src={book.image} />
 

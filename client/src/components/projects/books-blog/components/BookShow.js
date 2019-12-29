@@ -15,14 +15,15 @@ class BookShow extends React.Component {
   }
 
   render() {
+    const book = this.props.book;
     return (
       <div className="main">
         <BookNav />
         <div className="container d-flex flex-column align-items-center">
-          <h1>{this.props.book.title}</h1>
-          <h2>{this.props.book.author}</h2>
-          <img src={this.props.book.image} />
-          <p>{this.props.book.desc}</p>
+          <h1>{book.title}</h1>
+          <h2>By: {book.author}</h2>
+          <img src={book.image} />
+          <p>{book.desc}</p>
         </div>
 
         <div
