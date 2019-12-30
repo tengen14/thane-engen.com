@@ -102,9 +102,14 @@ $primary-pink: #edddd4;
       margin: 0;
       color: white;
     }
+    #github-linkedin {
+      display: flex;
+      justify-content: center;
+    }
     a {
       color: $secondary-red;
-      font-size: 10rem;
+      font-size: 3rem;
+      padding: 30px 10px 30px 10px;
     }
   }
 }
