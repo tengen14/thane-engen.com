@@ -68,10 +68,10 @@ export default class Contact extends React.Component {
             </button>
             <div>
               <a href="https://github.com/tengen14" target="_blank">
-                <i class="fab fa-github-square" />
+                <i className="fab fa-github-square" title="View My Github Profile!"/>
               </a>
               <a href="https://www.linkedin.com/in/thane-engen-b573bb149" target="_blank">
-                <i class="fab fa-linkedin" />
+                <i className="fab fa-linkedin" title="View My Linkedin Profile!"/>
               </a>
             </div>
           </form>

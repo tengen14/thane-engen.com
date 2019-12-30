@@ -102,5 +102,9 @@ $primary-pink: #edddd4;
       margin: 0;
       color: white;
     }
+    a {
+      color: $secondary-red;
+      font-size: 10rem;
+    }
   }
 }
