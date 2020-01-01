@@ -1,8 +1,3 @@
-// body {
-//   background-color: #747880;
-//   overflow-x: hidden;
-// }
-
 body {
   background-color: #fbe8a6;
 }
@@ -22,6 +17,11 @@ $primary-pink: #edddd4;
       width: 40px;
       height: 40px;
     }
+  }
+
+  h2 {
+    text-align: center;
+    text-decoration: underline;
   }
 
   .red-button {
@@ -94,9 +94,12 @@ $primary-pink: #edddd4;
     a {
       color: lightblue;
     }
+    .container {
+      padding: 100px 0px 100px 0px;
+    }
     img {
-      height: 350px;
-      width: 350px;
+      height: 300px;
+      width: 300px;
     }
   }
 
