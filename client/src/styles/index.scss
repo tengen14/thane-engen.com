@@ -90,10 +90,13 @@ $primary-pink: #edddd4;
     h2 {
       margin: 0;
       color: white;
+    } 
+    h5 {
+      font-size: 20px;
     }
     a {
       color: white;
-      margin-top: 20px;
+      margin-top: 10px;
     }
     i {
       padding-left: 10px;
@@ -107,16 +110,11 @@ $primary-pink: #edddd4;
       padding: 200px 0px 200px 0px;
     }
     .card {
-      height: 490px;
-      width: 304px;              
+      height: 100%;           
       border: 2px solid black;             
     }
     .card-body {
       border-top: 1px solid black;
-    }
-    img {
-      height: 300px;
-      width: 300px;
     }
   }
 
