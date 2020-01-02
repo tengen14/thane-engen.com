@@ -92,10 +92,27 @@ $primary-pink: #edddd4;
       color: white;
     }
     a {
-      color: lightblue;
+      color: white;
+      margin-top: 20px;
+    }
+    i {
+      padding-left: 10px;
+      font-size: 23px;
+    }
+    span {
+      position: relative;
+      bottom: 3px;
     }
     .container {
-      padding: 100px 0px 100px 0px;
+      padding: 200px 0px 200px 0px;
+    }
+    .card {
+      height: 490px;
+      width: 304px;              
+      border: 2px solid black;             
+    }
+    .card-body {
+      border-top: 1px solid black;
     }
     img {
       height: 300px;

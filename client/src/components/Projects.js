@@ -11,40 +11,61 @@ const Projects = () => {
       <div className="container">
         <h2>Projects</h2>
         <div className="d-flex justify-content-around">
-          
           <div className="card">
             <img src={recipebox} className="card-img-top" />
             <div className="card-body">
               <h5 className="card-title">Recipe Box</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                A list of recipes that you can view, add to, edit, or delete
               </p>
-              <Link
-                to="/recipe-box"
-                target="_blank"
-                className="btn btn-primary"
-              >
-                Go somewhere
-              </Link>
+              <div className="d-flex justify-content-around">
+                <Link
+                  to="/recipe-box"
+                  target="_blank"
+                  className="btn btn-success"
+                  title="See in Browser"
+                >
+                  View Project
+                </Link>
+                <a
+                  href="https://github.com/tengen14/Recipe-Box"
+                  target="_blank"
+                  className="btn btn-danger"
+                  title="See Source Code and Description on Github"
+                >
+                  <span>Learn More</span>
+                  <i className="fab fa-github-square" />
+                </a>
+              </div>
             </div>
           </div>
 
           <div className="card">
             <img src={wikipediaviewer} className="card-img-top" />
             <div className="card-body">
-              <h5 className="card-title">Recipe Box</h5>
+              <h5 className="card-title">Wikipedia Viewer</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                A basic search bar used to find articles using the Wikipedia API
               </p>
-              <Link
-                to="/wikipedia-viewer"
-                target="_blank"
-                className="btn btn-primary"
-              >
-                Go somewhere
-              </Link>
+              <div className="d-flex justify-content-around">
+                <Link
+                  to="/wikipedia-viewer"
+                  target="_blank"
+                  className="btn btn-success"
+                  title="See in Browser"
+                >
+                  View Project
+                </Link>
+                <a
+                  href="https://github.com/tengen14/Wikipedia-Viewer"
+                  target="_blank"
+                  className="btn btn-danger"
+                  title="See Source Code and Description on Github"
+                >
+                  <span>Learn More</span>
+                  <i className="fab fa-github-square" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -53,15 +74,29 @@ const Projects = () => {
             <div className="card-body">
               <h5 className="card-title">Book Blog</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                A pseudo book blog with CRUD functionality
               </p>
-              <Link to="/book-blog" target="_blank" className="btn btn-primary">
-                Go somewhere
-              </Link>
+              <div className="d-flex justify-content-around">
+                <Link
+                  to="/book-blog"
+                  target="_blank"
+                  className="btn btn-success"
+                  title="See in Browser"
+                >
+                  View Project
+                </Link>
+                <a
+                  href="https://github.com/tengen14/Book-Blog"
+                  target="_blank"
+                  className="btn btn-danger"
+                  title="See Source Code and Description on Github"
+                >
+                  <span>Learn More</span>
+                  <i className="fab fa-github-square" />
+                </a>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
