@@ -19,7 +19,14 @@ $primary-pink: #edddd4;
     }
   }
 
+  h1 {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 56px;
+  }
+
   h2 {
+    font-family: 'Poiret One', cursive;
+    font-size: 46px;
     text-align: center;
     text-decoration: underline;
   }
@@ -87,6 +94,7 @@ $primary-pink: #edddd4;
   #projects {
     background-color: $primary-blue;
     margin: 0;
+    padding-top: 350px;
     h2 {
       margin: 0;
       color: white;
@@ -107,7 +115,7 @@ $primary-pink: #edddd4;
       bottom: 3px;
     }
     .container {
-      padding: 200px 0px 200px 0px;
+      padding-bottom: 350px;
     }
     .card {
       height: 100%;
