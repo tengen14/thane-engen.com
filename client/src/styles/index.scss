@@ -90,7 +90,7 @@ $primary-pink: #edddd4;
     h2 {
       margin: 0;
       color: white;
-    } 
+    }
     h5 {
       font-size: 20px;
     }
@@ -110,8 +110,8 @@ $primary-pink: #edddd4;
       padding: 200px 0px 200px 0px;
     }
     .card {
-      height: 100%;           
-      border: 2px solid black;             
+      height: 100%;
+      border: 2px solid black;
     }
     .card-body {
       border-top: 1px solid black;
@@ -132,6 +132,53 @@ $primary-pink: #edddd4;
       color: $secondary-red;
       font-size: 2.5rem;
       margin: 30px 10px 30px 10px;
+    }
+  }
+
+  /*  LARGE BREAKPOINT */
+  @media screen and (max-width: 991.98px) {
+    #projects {
+      i {
+        display: none;
+      }
+      a {
+        transform: scale(0.9);
+      }
+      .card:nth-of-type(3) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  /* SMALL BREAKPOINT */
+  @media screen and (max-width: 767.98px) {
+    #projects {
+      .row:nth-of-type(3) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+
+  /* XSMALL BREAKPOINT */
+  @media screen and (max-width: 575.98px) {
+    #projects {
+      .card {
+        width: 300px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .row:nth-of-type(3) {
+        justify-content: unset;
+      }
+      img {
+        width: 296px;
+      }
     }
   }
 }
