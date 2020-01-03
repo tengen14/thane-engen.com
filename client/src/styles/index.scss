@@ -161,7 +161,6 @@ $primary-pink: #edddd4;
     }
   }
 
-
   /* XSMALL BREAKPOINT */
   @media screen and (max-width: 575.98px) {
     #projects {
@@ -176,8 +175,20 @@ $primary-pink: #edddd4;
       .row:nth-of-type(3) {
         justify-content: unset;
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    #projects {
       img {
-        width: 296px;
+        transform: unset;
+      }
+      .card-img-top {
+        padding-bottom: 60px;
+        padding-top: 60px;
+      }
+      .card {
+        height: 466.52px;
       }
     }
   }
