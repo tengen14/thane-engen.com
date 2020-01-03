@@ -12,20 +12,22 @@ $primary-pink: #edddd4;
   nav {
     width: 100%;
     background-color: $primary-blue;
-    z-index: 1;
+    z-index: 2;
     img {
       width: 40px;
       height: 40px;
     }
   }
 
+  background-color: $primary-blue;
+
   h1 {
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: "Didact Gothic", sans-serif;
     font-size: 56px;
   }
 
   h2 {
-    font-family: 'Poiret One', cursive;
+    font-family: "Poiret One", cursive;
     font-size: 46px;
     text-align: center;
     text-decoration: underline;
@@ -35,7 +37,7 @@ $primary-pink: #edddd4;
     color: white;
     background-color: $secondary-red;
     border-color: $secondary-red;
-    width: 110px;
+    width: 130px;
     height: 40px;
     border-radius: 4px;
     &:focus {
@@ -55,11 +57,19 @@ $primary-pink: #edddd4;
   }
 
   .particles {
-    background-color: $primary-blue;
-    position: relative;
     width: 100%;
-    height: 100vh;
-    z-index: -1;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    position: relative;
+    padding: 0px;
+    background-color: $primary-blue;
+    z-index: 1;
   }
 
   @mixin centerVertical {
@@ -76,25 +86,9 @@ $primary-pink: #edddd4;
     }
   }
 
-  #about {
-    background-color: $primary-blue;
-    color: white;
-    height: 100%;
-    h2 {
-      margin: 0;
-      height: 40px;
-      color: white;
-    }
-    img {
-      height: 300px;
-      width: 300px;
-    }
-  }
-
   #projects {
-    background-color: $primary-blue;
     margin: 0;
-    padding-top: 350px;
+    padding-top: 1000px;
     h2 {
       margin: 0;
       color: white;
@@ -114,15 +108,27 @@ $primary-pink: #edddd4;
       position: relative;
       bottom: 3px;
     }
-    .container {
-      padding-bottom: 350px;
-    }
     .card {
       height: 100%;
       border: 2px solid black;
     }
     .card-body {
       border-top: 1px solid black;
+    }
+  }
+
+  #about {
+    background-color: $primary-blue;
+    color: white;
+    height: 100%;
+    h2 {
+      margin: 0;
+      height: 40px;
+      color: white;
+    }
+    img {
+      height: 300px;
+      width: 300px;
     }
   }
 
@@ -135,6 +141,8 @@ $primary-pink: #edddd4;
     #github-linkedin {
       display: flex;
       justify-content: center;
+      position: relative;
+      z-index: 1;
     }
     a {
       color: $secondary-red;

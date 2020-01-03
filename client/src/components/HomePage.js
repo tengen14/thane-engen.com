@@ -16,12 +16,12 @@ const HomePage = () => {
         <h1>My Name is Thane Engen and I am a Web Developer</h1>
         <a href="#about">
           <button type="button" className="red-button">
-            Learn More
+            View my Projects
           </button>
         </a>
       </div>
-      <About />
       <Projects />
+      <About />
       <Contact />
     </div>
   );

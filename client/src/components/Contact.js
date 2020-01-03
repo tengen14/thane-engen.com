@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
                 className="form-control"
                 name="email"
                 type="email"
-                placeholder="Email"
+                placeholder="Email Address"
                 required
                 value={this.state.email}
                 onChange={this.handleChange}
@@ -67,23 +67,20 @@ export default class Contact extends React.Component {
               Submit
             </button>
           </form>
-          <div id="github-linkedin">
-            <a href="https://github.com/tengen14" target="_blank">
-              <i
-                className="fab fa-github-square"
-                title="View My Github Profile!"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/thane-engen-b573bb149"
-              target="_blank"
-            >
-              <i
-                className="fab fa-linkedin"
-                title="View My Linkedin Profile!"
-              />
-            </a>
-          </div>
+        </div>
+        <div id="github-linkedin">
+          <a href="https://github.com/tengen14" target="_blank">
+            <i
+              className="fab fa-github-square"
+              title="View My Github Profile!"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thane-engen-b573bb149"
+            target="_blank"
+          >
+            <i className="fab fa-linkedin" title="View My Linkedin Profile!" />
+          </a>
         </div>
       </div>
     );
