@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import HomeParticles from "./HomeParticles";
+import Entrance from "./Entrance";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -11,15 +11,7 @@ const HomePage = () => {
     <div id="Home">
       <a name="top" />
       <NavBar />
-      <HomeParticles />
-      <div id="enter-site-content" className="text-center">
-        <h1>My Name is Thane Engen and I am a Web Developer</h1>
-        <a href="#projects">
-          <button type="button" className="red-button">
-            View Projects
-          </button>
-        </a>
-      </div>
+      <Entrance />
       <Projects />
       <br />
       <About />
