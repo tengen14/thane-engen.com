@@ -20,7 +20,7 @@ const Projects = () => {
                 <p className="card-text">
                   A list of recipes that you can view, add to, edit, or delete
                 </p>
-                <div className="d-flex justify-content-around">
+                <div className="recipe-buttons d-flex justify-content-around">
                   <Link
                     to="/recipe-box"
                     target="_blank"
@@ -53,7 +53,7 @@ const Projects = () => {
                   A basic search bar used to find articles using the Wikipedia
                   API
                 </p>
-                <div className="d-flex justify-content-around">
+                <div className="wikipedia-buttons d-flex justify-content-around">
                   <Link
                     to="/wikipedia-viewer"
                     target="_blank"
@@ -85,7 +85,7 @@ const Projects = () => {
                 <p className="card-text">
                   A pseudo book blog with CRUD functionality
                 </p>
-                <div className="d-flex justify-content-around">
+                <div className="blog-buttons d-flex justify-content-around">
                   <Link
                     to="/book-blog"
                     target="_blank"
@@ -120,7 +120,7 @@ const Projects = () => {
                   A basic search bar used to find articles using the Wikipedia
                   API
                 </p>
-                <div className="d-flex justify-content-around">
+                <div className="wikipedia-buttons d-flex justify-content-around">
                   <Link
                     to="/wikipedia-viewer"
                     target="_blank"
@@ -154,7 +154,7 @@ const Projects = () => {
                 <p className="card-text">
                   A pseudo book blog with CRUD functionality
                 </p>
-                <div className="d-flex justify-content-around">
+                <div className="blog-buttons d-flex justify-content-around">
                   <Link
                     to="/book-blog"
                     target="_blank"
