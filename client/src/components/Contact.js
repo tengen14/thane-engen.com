@@ -11,9 +11,9 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <div id="contact">
+      <div id="contact" className="container">
+         <h2>Contact</h2>
         <div className="container">
-          <h2>Contact</h2>
           <form autoComplete="off">
             <div className="form-group">
               <input

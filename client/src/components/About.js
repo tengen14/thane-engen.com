@@ -2,10 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about">
-      <div className="container">
-        <h2>About</h2>
-      </div>
+    <div id="about" className="container">
+      <h2>About</h2>
       <div className="container">
         <div className="row">
           <div className="col-sm text-center">

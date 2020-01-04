@@ -7,10 +7,8 @@ import bookblog from "../imgs/projects/book-blog.png";
 
 const Projects = () => {
   return (
-    <div id="projects">
-      <div className="container">
-        <h2>Projects</h2>
-      </div>
+    <div id="projects" className="container">
+      <h2>Projects</h2>
       <div className="container">
         <div className="row">
           {/* Recipe Box */}

@@ -21,8 +21,11 @@ const HomePage = () => {
         </a>
       </div>
       <Projects />
+      <br />
       <About />
+      <br />
       <Contact />
+      <br />
     </div>
   );
 };
