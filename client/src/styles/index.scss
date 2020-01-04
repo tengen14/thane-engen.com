@@ -18,7 +18,7 @@ $primary-pink: #edddd4;
       height: 40px;
     }
     .nav-item {
-      font-size: 18px;
+      font-size: 16px;
     }
     .navbar-brand {
       padding-left: 5px;
@@ -40,17 +40,15 @@ $primary-pink: #edddd4;
     padding-bottom: 80px;
   }
 
-  hr {
-    margin: 0;
-    padding-top: 40px;
-    border-color: white;
+  canvas {
+    background-color: $primary-blue;
   }
 
   .red-button {
     color: white;
     background-color: $secondary-red;
     border-color: $secondary-red;
-    width: 130px;
+    width: 115px;
     height: 40px;
     border-radius: 4px;
     &:focus {
@@ -100,8 +98,11 @@ $primary-pink: #edddd4;
   }
 
   #projects {
+    padding-bottom: 200px;
+    margin-bottom: 200px;
     h2 {
-      margin: 0;
+      margin-bottom: 0px;
+      padding-top: 60px;
       color: white;
     }
     h5 {
@@ -134,9 +135,11 @@ $primary-pink: #edddd4;
   #about {
     background-color: $primary-blue;
     color: white;
-    height: 100%;
+    padding-bottom: 200px;
+    margin-bottom: 200px;
     h2 {
       margin: 0;
+      padding-top: 60px;
       color: white;
     }
     img {
@@ -150,8 +153,11 @@ $primary-pink: #edddd4;
 
   #contact {
     background-color: $primary-blue;
+    padding-bottom: 200px;
+    margin-bottom: 200px;
     h2 {
       margin: 0;
+      padding-top: 60px;
       color: white;
     }
     .container {

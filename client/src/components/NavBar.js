@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Octicon, {KebabHorizontal} from "@primer/octicons-react";
+import Octicon, { KebabHorizontal } from "@primer/octicons-react";
 import logo from "../imgs/thane-engen-logo.png";
 
 const NavBar = () => {
@@ -18,15 +18,20 @@ const NavBar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span><Octicon icon={KebabHorizontal} size="medium"/></span>
+        <span>
+          <Octicon icon={KebabHorizontal} size="medium" />
+        </span>
       </button>
-      <div className="collapse navbar-collapse d-sm-flex justify-content-end text-right" id="navbarNavAltMarkup">
+      <div
+        className="collapse navbar-collapse d-sm-flex justify-content-end text-right"
+        id="navbarNavAltMarkup"
+      >
         <div className="navbar-nav ">
-          <a className="nav-item nav-link" href="#about">
-            About
-          </a>
           <a className="nav-item nav-link" href="#projects">
             Projects
+          </a>
+          <a className="nav-item nav-link" href="#about">
+            About
           </a>
           <a className="nav-item nav-link" href="#contact">
             Contact

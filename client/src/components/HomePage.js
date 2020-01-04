@@ -14,9 +14,9 @@ const HomePage = () => {
       <HomeParticles />
       <div id="enter-site-content" className="text-center">
         <h1>My Name is Thane Engen and I am a Web Developer</h1>
-        <a href="#about">
+        <a href="#projects">
           <button type="button" className="red-button">
-            View my Projects
+            View Projects
           </button>
         </a>
       </div>
