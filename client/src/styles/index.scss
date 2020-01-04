@@ -7,11 +7,12 @@ $secondary-blue: #197278;
 $primary-red: #772e25;
 $secondary-red: #c44536;
 $primary-pink: #edddd4;
+$section-background:#3E4E4A;
 
 #Home {
   nav {
     width: 100%;
-    background-color: $primary-blue;
+    background-color: $section-background;
     z-index: 2;
     img {
       width: 40px;
@@ -78,7 +79,7 @@ $primary-pink: #edddd4;
 
   .container {
     position: relative;
-    background-color: $primary-blue;
+    background-color: $section-background;;
     z-index: 1;
   }
 
@@ -100,6 +101,7 @@ $primary-pink: #edddd4;
   #projects {
     padding-bottom: 200px;
     margin-bottom: 200px;
+    background-color: $section-background;
     h2 {
       margin-bottom: 0px;
       padding-top: 60px;
@@ -133,7 +135,7 @@ $primary-pink: #edddd4;
   }
 
   #about {
-    background-color: $primary-blue;
+    background-color: $section-background;
     color: white;
     padding-bottom: 200px;
     margin-bottom: 200px;
@@ -152,7 +154,7 @@ $primary-pink: #edddd4;
   }
 
   #contact {
-    background-color: $primary-blue;
+    background-color: $section-background;
     padding-bottom: 200px;
     margin-bottom: 200px;
     h2 {
@@ -167,7 +169,6 @@ $primary-pink: #edddd4;
     #github-linkedin {
       display: flex;
       justify-content: center;
-      padding-bottom: 25px;
     }
     button {
       margin: 25px 0px 25px 0px;
@@ -242,6 +243,7 @@ $primary-pink: #edddd4;
     }
   }
 
+  /* EVEN SMALLER BREAKPOINT */
   @media screen and (max-width: 500px) {
     #projects {
       img {
