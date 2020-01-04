@@ -31,6 +31,13 @@ $primary-pink: #edddd4;
     font-size: 46px;
     text-align: center;
     text-decoration: underline;
+    padding-bottom: 80px;
+  }
+
+  hr {
+    margin: 0;
+    padding-top: 40px;
+    border-color: white;
   }
 
   .red-button {
@@ -67,7 +74,6 @@ $primary-pink: #edddd4;
 
   .container {
     position: relative;
-    padding: 0px;
     background-color: $primary-blue;
     z-index: 1;
   }
@@ -87,7 +93,7 @@ $primary-pink: #edddd4;
   }
 
   #projects {
-    margin: 0;
+    // margin: 0;
     padding-top: 1000px;
     h2 {
       margin: 0;
@@ -123,7 +129,7 @@ $primary-pink: #edddd4;
     height: 100%;
     h2 {
       margin: 0;
-      height: 40px;
+      padding-top: 100px;
       color: white;
     }
     img {
@@ -136,18 +142,28 @@ $primary-pink: #edddd4;
     background-color: $primary-blue;
     h2 {
       margin: 0;
+      padding-top: 100px;
       color: white;
+    }
+    .container {
+      padding-left: 10%;
+      padding-right: 10%;
     }
     #github-linkedin {
       display: flex;
       justify-content: center;
-      position: relative;
-      z-index: 1;
+      padding-bottom: 25px;
+    }
+    button {
+      margin: 25px 0px 25px 0px;
     }
     a {
       color: $secondary-red;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin: 30px 10px 30px 10px;
+      &:hover {
+        opacity: 0.65;
+      }
     }
   }
 
@@ -173,6 +189,11 @@ $primary-pink: #edddd4;
       .row:nth-of-type(3) {
         display: flex;
         justify-content: center;
+      }
+    }
+    #contact {
+      form {
+        text-align: center;
       }
     }
   }

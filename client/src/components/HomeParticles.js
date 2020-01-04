@@ -11,6 +11,7 @@ const HomeParticles = () => {
             value: 161,
             density: {
               enable: true,
+              density_auto: true,
               value_area: 1341.5509907748635
             }
           },

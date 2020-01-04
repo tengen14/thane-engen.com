@@ -8,9 +8,10 @@ import bookblog from "../imgs/projects/book-blog.png";
 const Projects = () => {
   return (
     <div id="projects">
-      <h2>Projects</h2>
       <div className="container">
-        
+        <h2>Projects</h2>
+      </div>
+      <div className="container">
         <div className="row">
           {/* Recipe Box */}
           <div className="col-md-4 col-sm-6 col-6">
@@ -178,7 +179,6 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      
       </div>
     </div>
   );
