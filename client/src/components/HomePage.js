@@ -16,7 +16,11 @@ const HomePage = () => {
       <Projects />
       <About />
       <Contact />
-      <div className="divider"></div>
+      <div className="divider">
+        <footer className="divider">
+          <small>Copyright &copy; 2020, Thane Engen. All Rights Reserved</small>
+        </footer>
+      </div>
     </div>
   );
 };

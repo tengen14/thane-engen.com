@@ -111,9 +111,16 @@ $section-background: #3e4e4a;
 
   .divider {
     background-color: black;
-    height: 60px;
+    height: 45px;
     &:nth-of-type(6) {
       margin-top: 80px;
+      color: white;
+      text-align: center;
+      font-size: 1.1rem;
+      small {
+        position: relative;
+        top: 12px;
+      }
     }
   }
 
