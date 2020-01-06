@@ -12,12 +12,11 @@ const HomePage = () => {
       <a name="top" />
       <NavBar />
       <Entrance />
+      <div className="divider"></div>
       <Projects />
-      <br />
       <About />
-      <br />
       <Contact />
-      <br />
+      <div className="divider"></div>
     </div>
   );
 };

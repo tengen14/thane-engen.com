@@ -3,7 +3,6 @@ body {
 }
 
 $primary-blue: #283d38;
-$secondary-blue: #197278;
 $primary-red: #772e25;
 $secondary-red: #c44536;
 $primary-pink: #edddd4;
@@ -12,7 +11,7 @@ $section-background: #3e4e4a;
 #Home {
   nav {
     width: 100%;
-    background-color: $section-background;
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
     img {
       width: 40px;
@@ -20,6 +19,10 @@ $section-background: #3e4e4a;
     }
     .nav-item {
       font-size: 16px;
+      color: rgba(255, 255, 255, 0.65);
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
     }
     .navbar-brand {
       padding-left: 5px;
@@ -85,12 +88,11 @@ $section-background: #3e4e4a;
 
   #enter-site-content {
     position: relative;
-    top: 50vh;
+    top: 40vh;
     width: 100%;
     h1 {
       color: white;
     }
-    padding-bottom: 1000px;
   }
 
   #enter-site-image {
@@ -103,13 +105,21 @@ $section-background: #3e4e4a;
   #entrance {
     width: 100%;
     height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1543268825-d04570dff7bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-image: url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=1500&q=80");
     background-size: cover;
+  }
+
+  .divider {
+    background-color: black;
+    height: 60px;
+    &:nth-of-type(6) {
+      margin-top: 80px;
+    }
   }
 
   #projects {
     padding-bottom: 200px;
-    margin-bottom: 200px;
+    margin-top: 80px;
     background-color: $section-background;
     h2 {
       margin-bottom: 0px;
@@ -150,7 +160,7 @@ $section-background: #3e4e4a;
     background-color: $section-background;
     color: white;
     padding-bottom: 200px;
-    margin-bottom: 200px;
+    margin-top: 80px;
     h2 {
       margin: 0;
       padding-top: 60px;
@@ -167,8 +177,8 @@ $section-background: #3e4e4a;
 
   #contact {
     background-color: $section-background;
-    padding-bottom: 200px;
-    margin-bottom: 200px;
+    padding-bottom: 50px;
+    margin-top: 80px;
     h2 {
       margin: 0;
       padding-top: 60px;
