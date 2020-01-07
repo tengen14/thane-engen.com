@@ -9,7 +9,7 @@ import "../styles/index.scss";
 const HomePage = () => {
   return (
     <div id="Home">
-      <a name="top" />
+      <div id="top" />
       <NavBar />
       <Entrance />
       <div className="divider"></div>

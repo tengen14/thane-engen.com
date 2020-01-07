@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React from "react";
 
 export default class Contact extends React.Component {
@@ -12,7 +11,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div id="contact" className="container">
-         <h2>Contact</h2>
+        <h2>Contact</h2>
         <div className="container">
           <form autoComplete="off">
             <div className="form-group">
@@ -68,7 +67,11 @@ export default class Contact extends React.Component {
             </button>
           </form>
           <div id="github-linkedin">
-            <a href="https://github.com/tengen14" target="_blank">
+            <a
+              href="https://github.com/tengen14"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i
                 className="fab fa-github-square"
                 title="View My Github Profile!"
@@ -77,6 +80,7 @@ export default class Contact extends React.Component {
             <a
               href="https://www.linkedin.com/in/thane-engen-b573bb149"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i
                 className="fab fa-linkedin"
@@ -112,7 +116,7 @@ export default class Contact extends React.Component {
   }
 
   sendFeedback(templateId, variables) {
-    const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailValidation = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
     for (let field in this.state) {
       if (this.state[field] === "") {
@@ -129,9 +133,7 @@ export default class Contact extends React.Component {
     window.emailjs.send("gmail", templateId, variables).then(response => {
       console.log("Email successfully sent!", response.status, response.text);
       alert("Email successfully sent!");
-    });
+    })
     this.setState({ name: "", subject: "", email: "", feedback: "" });
   }
 }
-
-// values only cleared when all values are filled and sent

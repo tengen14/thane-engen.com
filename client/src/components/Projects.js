@@ -14,7 +14,7 @@ const Projects = () => {
           {/* Recipe Box */}
           <div className="col-md-4 col-sm-6 col-6">
             <div className="card">
-              <img src={recipebox} className="card-img-top" />
+              <img src={recipebox} alt="Recipe Box" className="card-img-top" />
               <div className="card-body">
                 <h5 className="card-title">Recipe Box</h5>
                 <p className="card-text">
@@ -24,6 +24,7 @@ const Projects = () => {
                   <Link
                     to="/recipe-box"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-success"
                     title="See in Browser"
                   >
@@ -32,6 +33,7 @@ const Projects = () => {
                   <a
                     href="https://github.com/tengen14/Recipe-Box"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-danger"
                     title="See Source Code and Description on Github"
                   >
@@ -46,7 +48,11 @@ const Projects = () => {
           {/* Wikipedia */}
           <div className="col-md-4 col-sm-6 d-sm-block d-none">
             <div className="card">
-              <img src={wikipediaviewer} className="card-img-top" />
+              <img
+                src={wikipediaviewer}
+                alt="Wikipedia Viewer"
+                className="card-img-top"
+              />
               <div className="card-body">
                 <h5 className="card-title">Wikipedia Viewer</h5>
                 <p className="card-text">
@@ -57,6 +63,7 @@ const Projects = () => {
                   <Link
                     to="/wikipedia-viewer"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-success"
                     title="See in Browser"
                   >
@@ -65,6 +72,7 @@ const Projects = () => {
                   <a
                     href="https://github.com/tengen14/Wikipedia-Viewer"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-danger"
                     title="See Source Code and Description on Github"
                   >
@@ -79,7 +87,7 @@ const Projects = () => {
           {/* Book Blog */}
           <div className="col-md-4 d-md-block d-none">
             <div className="card">
-              <img src={bookblog} className="card-img-top" />
+              <img src={bookblog} alt="Book Blog" className="card-img-top" />
               <div className="card-body">
                 <h5 className="card-title">Book Blog</h5>
                 <p className="card-text">
@@ -89,6 +97,7 @@ const Projects = () => {
                   <Link
                     to="/book-blog"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-success"
                     title="See in Browser"
                   >
@@ -97,6 +106,7 @@ const Projects = () => {
                   <a
                     href="https://github.com/tengen14/Book-Blog"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-danger"
                     title="See Source Code and Description on Github"
                   >
@@ -113,7 +123,11 @@ const Projects = () => {
         <div className="row">
           <div className="col-6 d-sm-none d-block">
             <div className="card">
-              <img src={wikipediaviewer} className="card-img-top" />
+              <img
+                src={wikipediaviewer}
+                alt="Wikipedia Viewer"
+                className="card-img-top"
+              />
               <div className="card-body">
                 <h5 className="card-title">Wikipedia Viewer</h5>
                 <p className="card-text">
@@ -124,6 +138,7 @@ const Projects = () => {
                   <Link
                     to="/wikipedia-viewer"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-success"
                     title="See in Browser"
                   >
@@ -132,6 +147,7 @@ const Projects = () => {
                   <a
                     href="https://github.com/tengen14/Wikipedia-Viewer"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-danger"
                     title="See Source Code and Description on Github"
                   >
@@ -148,7 +164,7 @@ const Projects = () => {
         <div className="row">
           <div className="d-md-none col-sm-6 col-6">
             <div className="card">
-              <img src={bookblog} className="card-img-top" />
+              <img src={bookblog} alt="Book Blog" className="card-img-top" />
               <div className="card-body">
                 <h5 className="card-title">Book Blog</h5>
                 <p className="card-text">
@@ -158,6 +174,7 @@ const Projects = () => {
                   <Link
                     to="/book-blog"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-success"
                     title="See in Browser"
                   >
@@ -166,6 +183,7 @@ const Projects = () => {
                   <a
                     href="https://github.com/tengen14/Book-Blog"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-danger"
                     title="See Source Code and Description on Github"
                   >

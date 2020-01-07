@@ -18,7 +18,7 @@ class BookShow extends React.Component {
         <div className="container d-flex flex-column align-items-center">
           <h1>{book.title}</h1>
           <h2>By: {book.author}</h2>
-          <img src={book.image} />
+          <img src={book.image} alt="" />
           <p>{book.desc}</p>
         </div>
 
