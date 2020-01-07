@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Octicon, { KebabHorizontal } from "@primer/octicons-react";
 import logo from "../imgs/thane-engen-logo.png";
 
@@ -36,14 +35,17 @@ const NavBar = () => {
           <a className="nav-item nav-link" href="#contact">
             Contact
           </a>
-          <Link className="nav-item nav-link" to="#">
+          <a
+            className="nav-item nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/document/d/1qBPCb6u-dkdp12glsV5lxfVV6ZhC7Vq_ZONsOkq52iM/edit?usp=sharing"
+          >
             Resume
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
-
-    
   );
 };
 
