@@ -1,4 +1,5 @@
 import React from "react";
+import profilepic from "../imgs/profile-pic.jpg";
 
 const About = () => {
   return (
@@ -8,8 +9,8 @@ const About = () => {
         <div className="row">
           <div className="col-sm text-center">
             <img
-              src="https://3.bp.blogspot.com/-ZL7fCrVhP0U/W-mww8IGnTI/AAAAAAAANAg/A8LwYP9AC5QTo4I37Y8ke4ggJJDlauZ7gCLcBGAs/s1600/nyala.jpg"
-              alt="Nyala"
+              src={profilepic}
+              alt="Profile Pic"
             />
           </div>
           <div className="col-sm d-flex align-items-center">
