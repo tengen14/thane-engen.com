@@ -12,7 +12,7 @@ const About = () => {
               alt="Nyala"
             />
           </div>
-          <div className="col-sm">
+          <div className="col-sm d-flex align-items-center">
             <ul>
               <li>
                 I design, create, and manage quick and responsive web
