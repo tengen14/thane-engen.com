@@ -11,7 +11,8 @@ $section-background: #3e4e4a;
 #Home {
   nav {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    // background-color: rgba(255, 255, 255, 0);
+    background-color: $section-background;
     z-index: 2;
     img {
       width: 40px;
@@ -24,12 +25,8 @@ $section-background: #3e4e4a;
         color: rgba(255, 255, 255, 0.9);
       }
     }
-    .nav-link {
-      padding-top: 10px;
-    }
     .navbar-brand {
       padding-left: 7px;
-      padding-top: 7px;
     }
   }
 
@@ -48,10 +45,6 @@ $section-background: #3e4e4a;
     padding-bottom: 80px;
   }
 
-  canvas {
-    background-color: $primary-blue;
-  }
-
   .red-button {
     color: white;
     background-color: $secondary-red;
@@ -59,6 +52,7 @@ $section-background: #3e4e4a;
     width: 115px;
     height: 40px;
     border-radius: 4px;
+    margin-top: 10px;
     &:focus {
       outline: 0;
     }
@@ -73,15 +67,6 @@ $section-background: #3e4e4a;
     &:focus {
       outline: none;
     }
-  }
-
-  .particles {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    left: 0;
   }
 
   .container {
@@ -291,6 +276,14 @@ $section-background: #3e4e4a;
 
   /* EVEN SMALLER BREAKPOINT */
   @media screen and (max-width: 500px) {
+    nav {
+      img {
+        transform: scale(1);
+      }
+      .navbar-brand {
+        padding-bottom: 10px;
+      }
+    }
     #projects {
       img {
         transform: unset;
