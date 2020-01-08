@@ -336,5 +336,10 @@ $section-background: #3e4e4a;
         padding: 0px;
       }
     }
+    #about {
+      img {
+        transform: scale(0.9);
+      }
+    }
   }
 }
