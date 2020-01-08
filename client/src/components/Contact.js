@@ -60,6 +60,7 @@ export default class Contact extends React.Component {
             </div>
             <button
               type="submit"
+              title="Send Email"
               className="btn btn-primary btn-lg"
               onClick={this.handleSubmit}
             >
