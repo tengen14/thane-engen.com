@@ -51,6 +51,7 @@
   #random-search {
     font-size: 18px;
     position: relative;
+    z-index: 10;
     top: 16px;
     color: white;
   }
@@ -79,7 +80,7 @@
 
   /**/
 
-  @media (max-width: 576px) {
+  @media screen and (max-width: 576px) {
     h1 {
       font-size: 20px;
     }

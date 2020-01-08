@@ -22,7 +22,9 @@ const About = () => {
                 history.
               </li>
               <br />
+              <br />
               <li>Some Technologies I Enjoy Using Include:</li>
+              <br />
               <ul>
                 <li>HTML5</li>
                 <li>CSS3 (Flexbox & Grid), Sass, Bootstrap, Semantic UI </li>
