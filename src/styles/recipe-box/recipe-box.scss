@@ -1,0 +1,171 @@
+#Recipe-Box {
+  // background-color: #fbe8a6;
+  // height: 100vh;
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  padding-bottom: 10px;
+
+  li {
+    font-size: 30px;
+    line-height: 50px;
+    color: black;
+  }
+
+  /* RECIPE BOX TITLE */
+
+  h1 {
+    font-size: 5em;
+    font-family: "McLaren", cursive;
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  i.fas.fa-hamburger {
+    color: black;
+    font-size: 6rem;
+  }
+
+  /* RECIPE LIST  */
+
+  #recipe-list {
+    background-color: #b4dfe5;
+    max-height: 150px;
+    min-height: 50px;
+    overflow: scroll;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0px;
+    ul {
+      position: relative;
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+
+  a {
+    li {
+      list-style: none;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: oblique;
+      padding-left: 25px;
+    }
+  }
+
+  a:nth-child(even) {
+    li {
+      background-color: #d2fdff;
+    }
+  }
+
+  /* RECIPE SHOW  */
+
+  .ui.container {
+    padding: 0px;
+  }
+
+  #recipe-desc {
+    position: relative;
+    top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 0px;
+  }
+
+  #recipe-body {
+    background-color: #f4976c;
+    height: 300px;
+    overflow: scroll;
+  }
+
+  #recipe-add {
+    background-color: #303c6c;
+    margin: 0;
+    height: 50px;
+    border-bottom-left-radius: 7.8px;
+    border-bottom-right-radius: 7.8px;
+  }
+
+  i {
+    color: #c2bad1;
+    padding: 0px 7.5px 0px 7.5px;
+  }
+
+  i:hover {
+    color: white;
+  }
+
+  #recipe-title {
+    background-color: #303c6c;
+    margin: 0;
+    border-top-left-radius: 7.8px;
+    border-top-right-radius: 7.8px;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      color: white;
+      font-size: 36px;
+      padding-left: 25px;
+      padding-top: 6px;
+      max-width: 75%;
+      overflow: hidden;
+    }
+  }
+
+  #title-buttons {
+    position: relative;
+    padding-top: 17px;
+    padding-right: 30px;
+    font-size: 2em;
+  }
+
+  i.fas.fa-plus {
+    position: relative;
+    padding-left: 25px;
+    top: 10px;
+    font-size: 2.2rem;
+  }
+
+  #recipe-body {
+    ul {
+      li {
+        font-size: 28px;
+        line-height: 1.75;
+        overflow-wrap: break-word;
+      }
+    }
+    ol {
+      li {
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 30px 10px 25px 0px;
+        text-indent: 25px;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+
+  /* MEDIA QUERIES */
+
+  @media screen and (max-width: 520px) {
+    h1,
+    i.fas.fa-hamburger {
+      font-size: 4rem;
+    }
+    #recipe-title {
+      h2 {
+        width: 65%;
+      }
+    }
+    #title-buttons {
+      padding-right: 5px;
+      font-size: 1.6rem;
+    }
+  }
+}
