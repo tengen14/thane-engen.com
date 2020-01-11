@@ -10,12 +10,12 @@ import RecipeCreate from "./projects/recipe-box/components/recipes/RecipeCreate"
 import RecipeEdit from "./projects/recipe-box/components/recipes/RecipeEdit";
 import RecipeDelete from "./projects/recipe-box/components/recipes/RecipeDelete";
 
-import BookLanding from "./projects/books-blog/components/BookLanding";
-import BookList from "./projects/books-blog/components/BookList";
-import BookShow from "./projects/books-blog/components/BookShow";
-import BookNew from "./projects/books-blog/components/BookNew";
-import BookEdit from "./projects/books-blog/components/BookEdit";
-import BookDelete from "./projects/books-blog/components/BookDelete";
+import BookLanding from "./projects/books-blogs/components/BookLanding";
+import BookList from "./projects/books-blogs/components/BookList";
+import BookShow from "./projects/books-blogs/components/BookShow";
+import BookNew from "./projects/books-blogs/components/BookNew";
+import BookEdit from "./projects/books-blogs/components/BookEdit";
+import BookDelete from "./projects/books-blogs/components/BookDelete";
 
 import history from "../history";
 
