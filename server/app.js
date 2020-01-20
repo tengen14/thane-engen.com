@@ -1,7 +1,7 @@
 const express = require("express");
 const routes = require("./routes/index");
 
-const newsRoute = require("./routes/news");
+const newsRoute = require("./routes/recipes");
 
 const mongoose = require("mongoose");
 
