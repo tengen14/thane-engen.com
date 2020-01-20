@@ -9,6 +9,7 @@ import "../../../../../styles/recipe-box/recipe-box.scss";
 class RecipeIndex extends React.Component {
   componentDidMount() {
     this.props.getRecipes();
+    console.log(this.props.getRecipes());
   }
 
   render() {
