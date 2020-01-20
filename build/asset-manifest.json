@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6969b967.chunk.css",
+    "main.js": "/static/js/main.2e2148bc.chunk.js",
+    "main.js.map": "/static/js/main.2e2148bc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.905a4435.js",
+    "runtime-main.js.map": "/static/js/runtime-main.905a4435.js.map",
+    "static/js/2.33524302.chunk.js": "/static/js/2.33524302.chunk.js",
+    "static/js/2.33524302.chunk.js.map": "/static/js/2.33524302.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7ddfd20c4e84a7c2d15356c90d91cdf6.js": "/precache-manifest.7ddfd20c4e84a7c2d15356c90d91cdf6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6969b967.chunk.css.map": "/static/css/main.6969b967.chunk.css.map",
+    "static/js/2.33524302.chunk.js.LICENSE": "/static/js/2.33524302.chunk.js.LICENSE",
+    "static/media/book-blog.png": "/static/media/book-blog.e27e2e8e.png",
+    "static/media/profile-pic.jpg": "/static/media/profile-pic.812fc6c0.jpg",
+    "static/media/recipe-box.png": "/static/media/recipe-box.e0604993.png",
+    "static/media/thane-engen-logo.png": "/static/media/thane-engen-logo.ce887bd2.png",
+    "static/media/wikipedia-viewer.png": "/static/media/wikipedia-viewer.fdb4c692.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.905a4435.js",
+    "static/js/2.33524302.chunk.js",
+    "static/css/main.6969b967.chunk.css",
+    "static/js/main.2e2148bc.chunk.js"
+  ]
+}

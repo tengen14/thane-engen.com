@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy-production": "react-scripts build && scp -r ./build/* tengen14@64.225.43.253:/var/www/thane-engen.com/html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
