@@ -77,21 +77,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var database, collection;
 
-app.post("/recipe", (request, response) => {
-  collection.insert(request.body, (error, result) => {
+app.get("/recipes", (request, response) => {
+  collection.find({}).toArray((error, result) => {
     if (error) {
       return response.status(500).send(error);
     }
-    response.send(result.result);
+    response.send(result);
   });
 });
 
-app.get("/recipes", (request, response) => {
-  collection.find({}).toArray((error, result) => {
+app.get("/recipes/:id", (request, response) => {
+  collection.findOne(
+    { _id: new ObjectId(request.params.id) },
+    (error, result) => {
+      if (error) {
+        return response.status(500).send(error);
+      }
+      response.send(result);
+    }
+  );
+});
+
+app.post("/recipes", (request, response) => {
+  collection.insert(request.body, (error, result) => {
       if(error) {
           return response.status(500).send(error);
       }
-      response.send(result);
+      response.send(result.result);
   });
 });
 

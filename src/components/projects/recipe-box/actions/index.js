@@ -17,8 +17,8 @@ export const getRecipes = () => async dispatch => {
   dispatch({ type: GET_RECIPES, payload: response.data });
 };
 
-export const getRecipe = id => async dispatch => {
-  const response = await recipes.get(`/recipes/${id}`);
+export const getRecipe = _id => async dispatch => {
+  const response = await recipes.get(`/recipes/${_id}`);
 
   dispatch({ type: GET_RECIPE, payload: response.data });
 };
@@ -27,7 +27,7 @@ export const createRecipe = formValues => async dispatch => {
   const response = await recipes.post("/recipes", { ...formValues });
 
   dispatch({ type: CREATE_RECIPE, payload: response.data });
-  history.push(`/recipe-box/recipes/${response.data.id}`);
+  history.push(`/recipe-box/recipes/${response.data._id}`);
 };
 
 export const editRecipe = (id, formValues) => async dispatch => {

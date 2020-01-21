@@ -9,8 +9,8 @@ class RecipeList extends React.Component {
   renderList = () => {
     return this.props.recipes.slice(0).reverse().map(recipe => {
       return (
-        <Link to={`/recipe-box/recipes/${recipe.id}`} key={recipe.id}>
-          <li onClick={() => this.props.getRecipe(recipe.id)}>
+        <Link to={`/recipe-box/recipes/${recipe._id}`} key={recipe._id}>
+          <li onClick={() => this.props.getRecipe(recipe._id)}>
             {recipe.title}
           </li>
         </Link>

@@ -9,10 +9,11 @@ import "../../../../../styles/recipe-box/recipe-box.scss";
 class RecipeIndex extends React.Component {
   componentDidMount() {
     this.props.getRecipes();
-    console.log(this.props.getRecipes());
   }
 
   render() {
+    console.log(this.props.recipes);
+    console.log(this.props.selectedRecipe);
     return (
       <div id="Recipe-Box">
         <h1>
