@@ -25,7 +25,7 @@ class RecipeList extends React.Component {
     }
 
     // Style differs when no recipe is selected
-    if (!this.props.selectedRecipe) {
+    if (!this.props.selectedRecipe || this.props.selectedRecipe.ok) {
       return (
         <div id="recipe-list" className="ui container" style={styleVanillaRecipeList}>
           <ul>{this.renderList()}</ul>
