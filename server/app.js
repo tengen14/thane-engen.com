@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var database, collection;
 
+// RECIPE ROUTES
 app.get("/recipes", (req, res) => {
   collection.find({}).toArray((error, result) => {
     if (error) {
