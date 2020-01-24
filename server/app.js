@@ -17,64 +17,58 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var database, collection;
 
-app.get("/recipes", (request, response) => {
+app.get("/recipes", (req, res) => {
   collection.find({}).toArray((error, result) => {
     if (error) {
-      return response.status(500).send(error);
+      return res.status(500).send(error);
     }
-    response.send(result);
+    res.send(result);
   });
 });
 
-app.get("/recipes/:id", (request, response) => {
+app.get("/recipes/:id", (req, res) => {
   collection.findOne(
-    { _id: new ObjectId(request.params.id) },
+    { _id: new ObjectId(req.params.id) },
     (error, result) => {
       if (error) {
-        return response.status(500).send(error);
+        return res.status(500).send(error);
       }
-      response.send(result);
+      res.send(result);
     }
   );
 });
 
-app.post("/recipes", (request, response) => {
-  collection.insert(request.body, (error, result) => {
+app.post("/recipes", (req, res) => {
+  collection.insert(req.body, (error, result) => {
     if (error) {
-      return response.status(500).send(error);
+      return res.status(500).send(error);
     }
-    response.send(result.result);
+    res.send(result.result);
   });
 });
 
-// app.put("/recipes/:id", (request, response) => {
-//     const recipeId = request.params.id;
-//     const recipe = request.body;
-//     console.log("Editing recipe: ", recipeId, " to be ", recipe);
-
-//     collection.updateOne({ id: recipeId }, { $set: recipe }, (error, result) => {
-//         if (error) throw error;
-//         // // send back entire updated list, to make sure frontend data is up-to-date
-//         // dbCollection.find().toArray(function(_error, _result) {
-//         //     if (_error) throw _error;
-//         //     response.json(_result);
-//         // });
-//   });
-// });
+app.patch("/recipes/:id", (req, res) => {
+  const id = req.params.id;
+  const recipe = req.body;
+  console.log("Editing recipe: ", id, " to be ", recipe);
+  collection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: recipe },
+    (error, result) => {
+      if (error) throw error;
+      res.send(result);
+    }
+  );
+});
 
 app.delete("/recipes/:id", function(req, res) {
   var id = req.params.id;
-  // var collection = db.get().collection("menu");
 
-  collection.deleteOne({ _id: new ObjectId(id) }, function(
-    err,
-    results
-  ) {});
+  collection.deleteOne({ _id: new ObjectId(id) }, function(err, results) {});
 
   res.json({ success: id });
-
-
 });
+
 
 app.listen(5000, () => {
   MongoClient.connect(

@@ -18,7 +18,7 @@ export default (state = {}, action) => {
     case CREATE_RECIPE:
       return { ...state, [action.payload._id]: action.payload };
     case EDIT_RECIPE:
-      return { ...state, [action.payload.id]: action.payload };
+      return { ...state, [action.payload._id]: action.payload };
     case DELETE_RECIPE:
       return _.omit(state, action.payload);
     default:
