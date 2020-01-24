@@ -30,16 +30,16 @@ export const createRecipe = formValues => async dispatch => {
   history.push(`/recipe-box`);
 };
 
-export const editRecipe = (id, formValues) => async dispatch => {
-  const response = await recipes.patch(`/recipes/${id}`, formValues);
+export const editRecipe = (_id, formValues) => async dispatch => {
+  const response = await recipes.patch(`/recipes/${_id}`, formValues);
 
   dispatch({ type: EDIT_RECIPE, payload: response.data });
   history.goBack();
 };
 
-export const deleteRecipe = id => async dispatch => {
-  await recipes.delete(`/recipes/${id}`);
+export const deleteRecipe = _id => async dispatch => {
+  await recipes.delete(`/recipes/${_id}`);
 
-  dispatch({ type: DELETE_RECIPE, payload: id });
+  dispatch({ type: DELETE_RECIPE, payload: _id });
   history.push("/recipe-box");
 };
