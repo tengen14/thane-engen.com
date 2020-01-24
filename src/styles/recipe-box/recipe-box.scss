@@ -45,6 +45,11 @@
       padding: 0px;
       margin: 0px;
     }
+    a:nth-child(even) {
+      li {
+        background-color: #d2fdff;
+      }
+    }
   }
 
   a {
@@ -57,11 +62,7 @@
     }
   }
 
-  a:nth-child(even) {
-    li {
-      background-color: #d2fdff;
-    }
-  }
+  
 
   /* RECIPE SHOW  */
 
