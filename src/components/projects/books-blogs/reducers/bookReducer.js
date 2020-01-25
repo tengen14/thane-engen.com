@@ -11,13 +11,13 @@ import {
 export default (state = {}, action) => {
   switch (action.type) {
     case GET_BOOKS:
-      return { ...state, ..._.mapKeys(action.payload, "id") };
+      return { ...state, ..._.mapKeys(action.payload, "_id") };
     case GET_BOOK:
-      return { ...state, [action.payload.id]: action.payload };
+      return { ...state, [action.payload._id]: action.payload };
     case CREATE_BOOK:
-      return { ...state, [action.payload.id]: action.payload };
+      return { ...state, [action.payload._id]: action.payload };
     case EDIT_BOOK:
-      return { ...state, [action.payload.id]: action.payload };
+      return { ...state, [action.payload._id]: action.payload };
     case DELETE_BOOK:
       return _.omit(state, action.payload);
     default:

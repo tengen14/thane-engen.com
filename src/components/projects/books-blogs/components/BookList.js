@@ -13,15 +13,18 @@ class BookList extends React.Component {
 
   renderList = () => {
     return this.props.books.slice(0).reverse().map(book => {
+      if (!book._id) {
+        window.location.reload();
+      }
       return (
-        <div key={book.id}>
+        <div key={book._id}>
           <div className="container d-flex flex-column align-items-center">
             <h1>{book.title}</h1>
             <h2>By: {book.author}</h2>
 
             <img src={book.image} alt=""/>
 
-            <Link className="btn btn-info" to={`books/${book.id}`}>
+            <Link className="btn btn-info" to={`books/${book._id}`}>
               Click for more info...
             </Link>
           </div>

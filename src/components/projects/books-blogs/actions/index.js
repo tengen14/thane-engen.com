@@ -17,8 +17,8 @@ export const getBooks = () => async dispatch => {
   dispatch({ type: GET_BOOKS, payload: response.data });
 };
 
-export const getBook = id => async dispatch => {
-  const response = await books.get(`/books/${id}`);
+export const getBook = _id => async dispatch => {
+  const response = await books.get(`/books/${_id}`);
 
   dispatch({ type: GET_BOOK, payload: response.data });
 };
@@ -30,16 +30,16 @@ export const createBook = formValues => async dispatch => {
   history.push("/book-blog/books");
 };
 
-export const editBook = (id, formValues) => async dispatch => {
-  const response = await books.patch(`/books/${id}`, formValues);
+export const editBook = (_id, formValues) => async dispatch => {
+  const response = await books.patch(`/books/${_id}`, formValues);
 
   dispatch({ type: EDIT_BOOK, payload: response.data });
   history.goBack();
 };
 
-export const deleteBook = id => async dispatch => {
-  await books.delete(`/books/${id}`);
+export const deleteBook = _id => async dispatch => {
+  await books.delete(`/books/${_id}`);
 
-  dispatch({ type: DELETE_BOOK, payload: id });
+  dispatch({ type: DELETE_BOOK, payload: _id });
   history.push("/book-blog/books");
 };

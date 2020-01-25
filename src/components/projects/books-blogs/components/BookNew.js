@@ -6,6 +6,10 @@ import BookForm from "./BookForm";
 import "../../../../styles/book-blog/main.scss";
 
 class BookNew extends React.Component {
+  componentWillUnmount() {
+    window.location.reload();
+  }
+
   onSubmit = formValues => {
     this.props.createBook(formValues);
   };

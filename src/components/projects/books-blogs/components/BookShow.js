@@ -28,13 +28,13 @@ class BookShow extends React.Component {
         >
           <Link
             className="btn btn-warning btn-lg"
-            to={`edit/${this.props.book.id}`}
+            to={`edit/${this.props.book._id}`}
           >
             Edit
           </Link>
 
           <Link
-            to={`delete/${this.props.book.id}`}
+            to={`delete/${this.props.book._id}`}
             className="btn btn-danger btn-lg"
           >
             Delete
