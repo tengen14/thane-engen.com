@@ -7,10 +7,8 @@ const cors = require("cors");
 const bookSchema = require("./models/bookSchema");
 const bookSeedDB = require("./seedDBs/bookSeedDB");
 
-const db = require("./db");
-
 const app = express();
-mongoose.connect("mongodb://localhost/portfolio");
+mongoose.connect("mongodb://127.0.0.1:27017/portfolio");
 
 app.use(cors());
 app.options("*", cors());
@@ -18,8 +16,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 bookSeedDB();
-
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // RECIPE ROUTES
 const recipeRoutes = () => {
@@ -140,28 +136,7 @@ bookRoutes();
 var database, recipeCollection, bookCollection;
 
 app.listen(5000, () => {
-  // MongoClient.connect(
-  //   CONNECTION_URL,
-  //   { useNewUrlParser: true },
-  //   (error, client) => {
-  //     if (error) {
-  //       throw error;
-  //     }
-  //     database = client.db(DATABASE_NAME);
-  //     recipeCollection = database.collection("Recipes");
-  //     console.log("Connected to " + "Recipe Collection");
-  //   }
-  // );
-  // MongoClient.connect(
-  //   CONNECTION_URL,
-  //   { useNewUrlParser: true },
-  //   (error, client) => {
-  //     if (error) {
-  //       throw error;
-  //     }
-  //     database = client.db(DATABASE_NAME);
-  //     bookCollection = database.collection("Books");
-  //     console.log("Connected to " + "Book Collection");
-  //   }
-  // );
+  console.log("=====================================");
+  console.log("(  SERVER STARTED  )");
+  console.log("=====================================");
 });

@@ -28,7 +28,7 @@ const data = [
 
 function bookSeedDB() {
   //Remove all data in database
-  bookSchema.remove({}, function(err) {
+  bookSchema.deleteMany({}, function(err) {
     if (err) {
       console.log(err);
     }
