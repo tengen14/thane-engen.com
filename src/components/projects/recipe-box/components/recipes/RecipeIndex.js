@@ -12,8 +12,6 @@ class RecipeIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props.selectedRecipe);
-    console.log(this.props.match);
     return (
       <div id="Recipe-Box">
         <h1>

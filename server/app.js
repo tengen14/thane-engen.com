@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const ObjectId = require("mongodb").ObjectID;
 const cors = require("cors");
 
 const bookSchema = require("./models/bookSchema");
@@ -19,62 +18,61 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 bookSeedDB();
+recipeSeedDB();
+
 
 // RECIPE ROUTES
 const recipeRoutes = () => {
-  app.get("/recipes", (req, res) => {
-    recipeCollection.find({}).toArray((error, result) => {
-      if (error) {
-        return res.status(500).send(error);
-      }
+  app.get("/recipes", async (req, res) => {
+    try {
+      const result = await recipeSchema.find().exec();
       res.send(result);
-    });
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.get("/recipes/:id", (req, res) => {
-    recipeCollection.findOne(
-      { _id: new ObjectId(req.params.id) },
-      (error, result) => {
-        if (error) {
-          return res.status(500).send(error);
-        }
-        res.send(result);
-      }
-    );
+  app.get("/recipes/:id", async (req, res) => {
+    try {
+      const recipe = await recipeSchema.findById(req.params.id).exec();
+      res.send(recipe);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.post("/recipes", (req, res) => {
-    recipeCollection.insert(req.body, (error, result) => {
-      if (error) {
-        return res.status(500).send(error);
-      }
-      res.send(result.result);
-    });
+  app.post("/recipes", async (req, res) => {
+    try {
+      const recipe = new recipeSchema(req.body);
+      const result = await recipe.save();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.patch("/recipes/:id", (req, res) => {
-    const id = req.params.id;
-    const recipe = req.body;
-    console.log("Editing recipe: ", id, " to be ", recipe);
-    recipeCollection.updateOne(
-      { _id: new ObjectId(id) },
-      { $set: recipe },
-      (error, result) => {
-        if (error) throw error;
-        res.send(result);
-      }
-    );
+  app.patch("/recipes/:id", async (req, res) => {
+    try {
+      const recipe = await recipeSchema.findById(req.params.id).exec();
+      recipe.set(req.body);
+      const result = await recipe.save();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.delete("/recipes/:id", function(req, res) {
-    var id = req.params.id;
-
-    recipeCollection.deleteOne({ _id: new ObjectId(id) }, function(
-      err,
-      results
-    ) {});
-
-    res.json({ success: id });
+  app.delete("/recipes/:id", async (req, res) => {
+    try {
+      const result = await recipeSchema
+        .deleteOne({
+          _id: req.params.id
+        })
+        .exec();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 };
 // BOOK ROUTES
@@ -136,7 +134,6 @@ recipeRoutes();
 bookRoutes();
 
 ///////////////////////////////////////////////////////
-var database, recipeCollection, bookCollection;
 
 app.listen(5000, () => {
   console.log("=====================================");
