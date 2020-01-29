@@ -5,7 +5,10 @@ const ObjectId = require("mongodb").ObjectID;
 const cors = require("cors");
 
 const bookSchema = require("./models/bookSchema");
+const recipeSchema = require("./models/recipeSchema");
+
 const bookSeedDB = require("./seedDBs/bookSeedDB");
+const recipeSeedDB = require("./seedDBs/recipeSeedDB");
 
 const app = express();
 mongoose.connect("mongodb://127.0.0.1:27017/portfolio");
