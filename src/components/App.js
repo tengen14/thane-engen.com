@@ -18,9 +18,11 @@ import BookEdit from "./projects/books-blogs/components/BookEdit";
 import BookDelete from "./projects/books-blogs/components/BookDelete";
 
 import history from "../history";
+// import sessionStorage from "../storage/sessionStorage";
 
 class App extends React.Component {
   render() {
+    // console.log(sessionStorage.recipes);
     return (
       <div>
         <Router history={history}>

@@ -1,21 +1,25 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const MongoClient = require("mongodb").MongoClient;
+const mongoose = require("mongoose");
 const ObjectId = require("mongodb").ObjectID;
 const cors = require("cors");
 
-// const recipeRoutes = require("./routes/recipes.js");
+const bookSchema = require("./models/bookSchema");
+const bookSeedDB = require("./seedDBs/bookSeedDB");
 
-const CONNECTION_URL =
-  "mongodb+srv://tengen14:72Qjtb14@recipes-u0s0m.mongodb.net/test?retryWrites=true&w=majority";
-const DATABASE_NAME = "Portfolio";
+const db = require("./db");
 
 const app = express();
+mongoose.connect("mongodb://localhost/portfolio");
 
 app.use(cors());
 app.options("*", cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+bookSeedDB();
+
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // RECIPE ROUTES
 const recipeRoutes = () => {
@@ -76,59 +80,56 @@ const recipeRoutes = () => {
 };
 // BOOK ROUTES
 const bookRoutes = () => {
-  app.get("/books", (req, res) => {
-    bookCollection.find({}).toArray((error, result) => {
-      if (error) {
-        return res.status(500).send(error);
-      }
+  app.get("/books", async (req, res) => {
+    try {
+      const result = await bookSchema.find().exec();
       res.send(result);
-    });
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.get("/books/:id", (req, res) => {
-    bookCollection.findOne(
-      { _id: new ObjectId(req.params.id) },
-      (error, result) => {
-        if (error) {
-          return res.status(500).send(error);
-        }
-        res.send(result);
-      }
-    );
+  app.get("/books/:id", async (req, res) => {
+    try {
+      const book = await bookSchema.findById(req.params.id).exec();
+      res.send(book);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.post("/books", (req, res) => {
-    bookCollection.insert(req.body, (error, result) => {
-      if (error) {
-        return res.status(500).send(error);
-      }
-      res.send(result.result);
-    });
+  app.post("/books", async (req, res) => {
+    try {
+      const book = new bookSchema(req.body);
+      const result = await book.save();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.patch("/books/:id", (req, res) => {
-    const id = req.params.id;
-    const recipe = req.body;
-    console.log("Editing recipe: ", id, " to be ", recipe);
-    bookCollection.updateOne(
-      { _id: new ObjectId(id) },
-      { $set: recipe },
-      (error, result) => {
-        if (error) throw error;
-        res.send(result);
-      }
-    );
+  app.patch("/books/:id", async (req, res) => {
+    try {
+      const book = await bookSchema.findById(req.params.id).exec();
+      book.set(req.body);
+      const result = await book.save();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 
-  app.delete("/books/:id", function(req, res) {
-    var id = req.params.id;
-
-    bookCollection.deleteOne({ _id: new ObjectId(id) }, function(
-      err,
-      results
-    ) {});
-
-    res.json({ success: id });
+  app.delete("/books/:id", async (req, res) => {
+    try {
+      const result = await bookSchema
+        .deleteOne({
+          _id: req.params.id
+        })
+        .exec();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
   });
 };
 
@@ -139,29 +140,28 @@ bookRoutes();
 var database, recipeCollection, bookCollection;
 
 app.listen(5000, () => {
-  MongoClient.connect(
-    CONNECTION_URL,
-    { useNewUrlParser: true },
-    (error, client) => {
-      if (error) {
-        throw error;
-      }
-      database = client.db(DATABASE_NAME);
-      recipeCollection = database.collection("Recipes");
-      console.log("Connected to " + "Recipe Collection");
-    }
-  );
-
-  MongoClient.connect(
-    CONNECTION_URL,
-    { useNewUrlParser: true },
-    (error, client) => {
-      if (error) {
-        throw error;
-      }
-      database = client.db(DATABASE_NAME);
-      bookCollection = database.collection("Books");
-      console.log("Connected to " + "Book Collection");
-    }
-  );
+  // MongoClient.connect(
+  //   CONNECTION_URL,
+  //   { useNewUrlParser: true },
+  //   (error, client) => {
+  //     if (error) {
+  //       throw error;
+  //     }
+  //     database = client.db(DATABASE_NAME);
+  //     recipeCollection = database.collection("Recipes");
+  //     console.log("Connected to " + "Recipe Collection");
+  //   }
+  // );
+  // MongoClient.connect(
+  //   CONNECTION_URL,
+  //   { useNewUrlParser: true },
+  //   (error, client) => {
+  //     if (error) {
+  //       throw error;
+  //     }
+  //     database = client.db(DATABASE_NAME);
+  //     bookCollection = database.collection("Books");
+  //     console.log("Connected to " + "Book Collection");
+  //   }
+  // );
 });
