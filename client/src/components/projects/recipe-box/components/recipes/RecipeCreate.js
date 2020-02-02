@@ -4,6 +4,9 @@ import { createRecipe } from "../../actions";
 import Modal from "../Modal";
 
 class RecipeCreate extends React.Component {
+  componentWillUnmount() {
+    window.location.reload();
+  }
   // onSubmit is passed down as prop to Modal.js then RecipeForm.js
   // formValues is equal to the field values when data is submitted in RecipeForm.js
   onSubmit = formValues => {

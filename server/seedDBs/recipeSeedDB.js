@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const recipeSchema = require("../models/recipeSchema");
+// const recipeSchema = require("../models/recipeSchema");
 
 const data = [
   {
@@ -100,14 +100,14 @@ const data = [
 
 function recipeSeedDB() {
   //Remove all data in database
-  recipeSchema.deleteMany({}, function(err) {
+  recipeCollection.deleteMany({}, function(err) {
     if (err) {
       console.log(err);
     }
     console.log("removed RECIPE data!");
     //add data to database
     data.forEach(function(seed) {
-      recipeSchema.create(seed, function(err, Schema) {
+      recipeCollection.create(seed, function(err, Schema) {
         if (err) {
           console.log(err);
         } else {
