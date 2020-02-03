@@ -9,6 +9,8 @@ $primary-pink: #edddd4;
 $section-background: #3e4e4a;
 
 #Home {
+  -webkit-overflow-scrolling: touch;
+
   nav {
     width: 100%;
     // background-color: rgba(255, 255, 255, 0);

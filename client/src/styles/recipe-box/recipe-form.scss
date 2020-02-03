@@ -13,6 +13,7 @@
 
   div.ui.standard.modal.visible.active {
     height: 500px;
+    -webkit-overflow-scrolling: touch;
     overflow: scroll;
     border: 4px solid black;
     border-radius: 10px;

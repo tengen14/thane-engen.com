@@ -1,6 +1,7 @@
 #Recipe-Box {
   // background-color: #fbe8a6;
   // height: 100vh;
+  -webkit-overflow-scrolling: touch;
   
   ::-webkit-scrollbar {
     display: none;
@@ -82,6 +83,7 @@
   #recipe-body {
     background-color: #f4976c;
     height: 300px;
+    -webkit-overflow-scrolling: touch;
     overflow: scroll;
   }
 
