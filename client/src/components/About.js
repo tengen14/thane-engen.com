@@ -26,11 +26,13 @@ const About = () => {
               <li>Some Technologies I Enjoy Using Include:</li>
               <br />
               <ul>
-                <li>HTML5</li>
-                <li>CSS3 (Flexbox & Grid), Sass, Bootstrap, Semantic UI </li>
-                <li>JavaScript, ES6, jQuery, ReactJS, React/Redux</li>
+                <li>HTML5, JSX</li>
+                <li>CSS3 (Flexbox & Grid), SASS, Bootstrap, Semantic UI </li>
+                <li>JavaScript (ES6), ReactJS, React/Redux</li>
                 <li>Node (Express), MongoDB, Mongoose</li>
+                <li>Axios, Fetch API</li>
                 <li>Git/Github, Npm</li>
+                <li>NGINX</li>
               </ul>
             </ul>
           </div>
