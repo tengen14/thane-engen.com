@@ -40,7 +40,7 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="View Resume in Google Docs"
-            href="https://docs.google.com/document/d/1zJpaMLk3Cj0InwPuAHj9ccuXPR96SBL5aDe1HZLLI8c/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1kIwEm_vkJy8LfJ5qgG9mPkpJOwymLcog/view?usp=sharing"
           >
             Resume
           </a>
