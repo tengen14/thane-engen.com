@@ -18,7 +18,7 @@ const HomePage = () => {
       <Contact />
       <div className="divider">
         <footer className="divider">
-          <small>Copyright &copy; 2020, Thane Engen. All Rights Reserved</small>
+          {/* <small>Copyright &copy; 2020, Thane Engen. All Rights Reserved</small> */}
         </footer>
       </div>
     </div>
