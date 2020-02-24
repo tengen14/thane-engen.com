@@ -19,6 +19,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View Project in Browser"
+                className="project-image"
               >
                 <img
                   src={recipebox}
@@ -64,6 +65,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View Project in Browser"
+                className="project-image"
               >
                 <img
                   src={wikipediaviewer}
@@ -110,6 +112,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View Project in Browser"
+                className="project-image"
               >
                 <img src={bookblog} alt="Book Blog" className="card-img-top" />
               </Link>
@@ -153,6 +156,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View Project in Browser"
+                className="project-image"
               >
                 <img
                   src={wikipediaviewer}
@@ -201,6 +205,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View Project in Browser"
+                className="project-image"
               >
                 <img src={bookblog} alt="Book Blog" className="card-img-top" />
               </Link>
