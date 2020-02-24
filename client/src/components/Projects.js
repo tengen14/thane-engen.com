@@ -14,7 +14,18 @@ const Projects = () => {
           {/* Recipe Box */}
           <div className="col-md-4 col-sm-6 col-6">
             <div className="card">
-              <img src={recipebox} alt="Recipe Box" className="card-img-top" />
+              <Link
+                to="/recipe-box"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Project in Browser"
+              >
+                <img
+                  src={recipebox}
+                  alt="Recipe Box"
+                  className="card-img-top"
+                />
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">Recipe Box</h5>
                 <p className="card-text">
@@ -48,11 +59,18 @@ const Projects = () => {
           {/* Wikipedia */}
           <div className="col-md-4 col-sm-6 d-sm-block d-none">
             <div className="card">
-              <img
-                src={wikipediaviewer}
-                alt="Wikipedia Viewer"
-                className="card-img-top"
-              />
+              <Link
+                to="/wikipedia-viewer"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Project in Browser"
+              >
+                <img
+                  src={wikipediaviewer}
+                  alt="Wikipedia Viewer"
+                  className="card-img-top"
+                />
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">Wikipedia Viewer</h5>
                 <p className="card-text">
@@ -87,7 +105,14 @@ const Projects = () => {
           {/* Book Blog */}
           <div className="col-md-4 d-md-block d-none">
             <div className="card">
-              <img src={bookblog} alt="Book Blog" className="card-img-top" />
+              <Link
+                to="/book-blog"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Project in Browser"
+              >
+                <img src={bookblog} alt="Book Blog" className="card-img-top" />
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">Book Blog</h5>
                 <p className="card-text">
@@ -123,11 +148,18 @@ const Projects = () => {
         <div className="row">
           <div className="col-6 d-sm-none d-block">
             <div className="card">
-              <img
-                src={wikipediaviewer}
-                alt="Wikipedia Viewer"
-                className="card-img-top"
-              />
+              <Link
+                to="/wikipedia-viewer"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Project in Browser"
+              >
+                <img
+                  src={wikipediaviewer}
+                  alt="Wikipedia Viewer"
+                  className="card-img-top"
+                />
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">Wikipedia Viewer</h5>
                 <p className="card-text">
@@ -164,7 +196,14 @@ const Projects = () => {
         <div className="row">
           <div className="d-md-none col-sm-6 col-6">
             <div className="card">
-              <img src={bookblog} alt="Book Blog" className="card-img-top" />
+              <Link
+                to="/book-blog"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Project in Browser"
+              >
+                <img src={bookblog} alt="Book Blog" className="card-img-top" />
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">Book Blog</h5>
                 <p className="card-text">
