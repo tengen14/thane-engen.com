@@ -79,7 +79,7 @@ export default class Contact extends React.Component {
               />
             </a>
             <a
-              href="https://www.linkedin.com/in/thane-engen-b573bb149"
+              href="https://linkedin.com/in/thane-engen"
               target="_blank"
               rel="noopener noreferrer"
             >
