@@ -28,7 +28,7 @@ const About = () => {
               <ul>
                 <li>HTML5, JSX</li>
                 <li>CSS3 (Flexbox & Grid), SASS, Bootstrap, Semantic UI </li>
-                <li>JavaScript (ES6), ReactJS, React/Redux</li>
+                <li>JavaScript (ES6), EJS, ReactJS, React/Redux</li>
                 <li>Node (Express), MongoDB, Mongoose</li>
                 <li>Axios, Fetch API</li>
                 <li>Git/Github, Npm</li>
