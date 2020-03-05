@@ -12,18 +12,36 @@ class RecipeIndex extends React.Component {
   }
 
   render() {
-    return (
-      <div id="Recipe-Box">
-        <h1>
-          Recipe Box <i className="fas fa-hamburger"></i>
-        </h1>
-        <RecipeList
-          recipes={this.props.recipes}
-          selectedRecipe={this.props.selectedRecipe}
-        />
-        <RecipeShow selectedRecipe={this.props.selectedRecipe} />
-      </div>
-    );
+    if (!this.props.selectedRecipe || this.props.selectedRecipe.ok) {
+      return (
+        <div id="Recipe-Box">
+          <h1>
+            Recipe Box <i className="fas fa-hamburger"></i>
+          </h1>
+          <RecipeList
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
+          />
+          <RecipeShow selectedRecipe={this.props.selectedRecipe} />
+        </div>
+      );
+    } else {
+      const styleBackgroundIfRecipeSelected = {
+        height: "150vh"
+      };
+      return (
+        <div id="Recipe-Box" style={styleBackgroundIfRecipeSelected}>
+          <h1>
+            Recipe Box <i className="fas fa-hamburger"></i>
+          </h1>
+          <RecipeList
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
+          />
+          <RecipeShow selectedRecipe={this.props.selectedRecipe} />
+        </div>
+      );
+    }
   }
 }
 
